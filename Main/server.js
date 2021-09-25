@@ -3,7 +3,7 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
-const helpers = require('./utils/helpers');
+// const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const underscore = require('underscore');
@@ -11,15 +11,19 @@ const underscore = require('underscore');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create(); // .create({ helpers })
 
-app.use(session({
+const sesh = {
+    secret: 'CHANGEME',
+    cookie: {},
+    resave: false,
+    saveUninitialized: true,
     store: new SequelizeStore({
         db: sequelize
-    }),
-    secret: 'CHANGEME',
-    resave: false
-}));
+    })
+};
+
+app.use(session(sesh));
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');

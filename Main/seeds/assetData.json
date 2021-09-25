@@ -1,0 +1,56 @@
+[
+  {
+    "item": "Table",
+    "description": "Kitchen table. Queen Anne Style"
+    
+  },
+  {
+    "item": "Chairs",
+    "description": "Dining Room Chairs. Queen Anne Style"
+   
+  },
+  {
+    "item": "Couch",
+    "description": "Living Room Sofa"
+    
+  },
+  {
+    "item": "Recliner",
+    "description": "Living Room Recliner Brown"
+    
+  },
+  {
+    "item": "Recliner Sofa",
+    "description": "Living Room Recliner Green"
+
+  },
+  {
+    "item": "Recliner",
+    "description": "Living Room Recliner Blue"
+
+  },
+  {
+    "item": "Recliner",
+    "description": "Living Room Recliner Navy"
+
+  },
+  {
+    "item": "Recliner",
+    "description": "Living Room Recliner Red"
+
+  },
+  {
+    "item": "Recliner Sofa",
+    "description": "Living Room Recliner Brown"
+
+  },
+  {
+    "item": "King Bed",
+    "description": "King sized bed"
+  },
+  {
+    "item": "Twin Bed",
+    "description": "Kids bed"
+  }
+
+]

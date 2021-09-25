@@ -1,0 +1,39 @@
+[
+    {
+        "title":"Sal's Main Home",
+        "address1": "1234 Home Street",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": "USA",
+        "postalcode": "95818",
+        "owner_id":""
+    },
+     {
+        "title":"Sal's 2nd Home",
+        "address1": "1234 Home Street",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": "USA",
+        "postalcode": "95818",
+        "owner_id":""
+    },
+     {
+        "title":"Lernantino's Main Home",
+        "address1": "12354 Home Street",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": "USA",
+        "postalcode": "95818",
+        "owner_id":""
+    }, 
+    {
+        "title":"Amiko's Main Home",
+        "address1": "12364 Home Street",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": "USA",
+        "postalcode": "95818",
+        "owner_id":""
+    }
+
+]

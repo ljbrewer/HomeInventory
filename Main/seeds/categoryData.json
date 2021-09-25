@@ -1,0 +1,27 @@
+[
+    {
+        "furniture": "Furniture"
+    },
+    {
+        "media": "Media Equipment"
+    },
+    {
+        "sports": "Sports Equipment"
+
+    },
+    {
+        "yard": "Yard Equipment"
+    },
+    {
+        "appliance": "Kitchen Appliance"
+    },
+    {
+        "exercise": "Exercise Equipment"
+    },
+    {
+        "instrument": "Instrument"
+    },
+    {
+        "computer": "Computer Equipment"
+    }
+]

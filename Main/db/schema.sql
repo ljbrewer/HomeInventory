@@ -38,20 +38,26 @@ CREATE Table category(
     description VARCHAR(100)
 );
 
+CREATE Table stateTable(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  stateType VARCHAR(15)
+);
+
 CREATE Table assetTable (
     id INT AUTO_INCREMENT PRIMARY KEY,
     item VARCHAR(30),
     purchasedOn DATE,
-    description VARCHAR(200),
-    condition VARCHAR(30),
+    `description` VARCHAR(200),
+    state_id INT,
     price DECIMAL,
     currentValue DECIMAL,
     model VARCHAR (25),
     serialno VARCHAR(30),
-    owner_id INT,
-    FOREIGN KEY (owner_id) REFERENCES ownerTable(id)
-    ON Delete SET NULL,
+    comments TEXT,
     category_id INT,
+    home_id INT,
+    FOREIGN KEY (home_id) REFERENCES homeTable(id)
+    ON Delete SET NULL,
     FOREIGN KEY (category_id) REFERENCES category(id) ON DELETE SET NULL,
-    comments TEXT
+    FOREIGN KEY (state_id) REFERENCES stateTable(id) ON DELETE SET NULL
 );

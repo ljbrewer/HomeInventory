@@ -1,23 +1,42 @@
 const sequelize = require('../config/connection');
 const { User, Project } = require('../models');
 
-const userData = require('./userData.json');
-const projectData = require('./projectData.json');
+const userData = require('./ownerData.json');
+const homeData = require('./homeData.json');
+const assetData = require('./assetData.json');
+const locationData = require('./locationData.json');
+const stateData = require('./stateData.json');
+const categoryData = require('./categoryData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(userData, {
+  const owners = await Owner.bulkCreate(ownerData, {
     individualHooks: true,
     returning: true,
   });
 
-  for (const project of projectData) {
-    await Project.create({
-      ...project,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
+  const category = await Category.bulkCreate(categoryData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  const location = await Location.bulkCreate(locationData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  const state = await State.bulkCreate(stateData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+
+  const asset = await Asset.bulkCreate(assetData, {
+    individualHooks: true,
+    returning: true,
+  });
+  
 
   process.exit(0);
 };

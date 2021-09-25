@@ -16,14 +16,14 @@ CREATE TABLE ownerTable(
 
 CREATE Table homeTable (
     id int AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(30),
+    title VARCHAR(30) NOT NULL,
     purchasedOn DATE,
-    address1 VARCHAR(30),
+    address1 VARCHAR(30) NOT NULL,
     address2 VARCHAR(30),
-    city VARCHAR(30),
-    state VARCHAR(30),
-    country VARCHAR(30),
-    postalcode VARCHAR(15),
+    city VARCHAR(30) NOT NULL,
+    state VARCHAR(30) NOT NULL,
+    country VARCHAR(30) NOT NULL,
+    postalcode VARCHAR(15) NOT NULL,
     policyNumber VARCHAR(30),
     owner_id INT, 
     FOREIGN KEY (owner_id) REFERENCES ownerTable(id) ON DELETE SET NULL
@@ -46,9 +46,9 @@ CREATE Table stateTable(
 
 CREATE Table assetTable (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    item VARCHAR(30),
+    item VARCHAR(30) NOT NULL,
     purchasedOn DATE,
-    `description` VARCHAR(200),
+    `description` VARCHAR(200) NOT NULL,
     state_id INT,
     price DECIMAL,
     currentValue DECIMAL,

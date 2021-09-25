@@ -8,9 +8,10 @@ CREATE TABLE ownerTable(
   first_name VARCHAR(30) NOT NULL,
   last_name VARCHAR(30) NOT NULL,
   email VARCHAR(30) NOT NULL,
-  primaryPhone BIGINT,
+  primaryPhone BIGINT NOT NULL UNIQUE,
   cellPhone BIGINT,
-  workPhone BIGINT
+  workPhone BIGINT,
+  password VARCHAR(30)
 );
 
 CREATE Table homeTable (

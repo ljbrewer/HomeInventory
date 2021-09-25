@@ -42,16 +42,17 @@ CREATE Table assetTable (
     id INT AUTO_INCREMENT PRIMARY KEY,
     item VARCHAR(30),
     purchasedOn DATE,
-    description VARCHAR(200),
-    condition VARCHAR(30),
-    price DECIMAL,
-    currentValue DECIMAL,
+    `description` VARCHAR(200),
+    `condition` VARCHAR(30),
+    price DECIMAL(8,2),
+    currentValue DECIMAL(8,2),
     model VARCHAR (25),
     serialno VARCHAR(30),
+    comments TEXT,
+    category_id INT,
     owner_id INT,
     FOREIGN KEY (owner_id) REFERENCES ownerTable(id)
     ON Delete SET NULL,
-    category_id INT,
-    FOREIGN KEY (category_id) REFERENCES category(id) ON DELETE SET NULL,
-    comments TEXT
+    FOREIGN KEY (category_id) REFERENCES category(id) ON DELETE SET NULL
+    
 );

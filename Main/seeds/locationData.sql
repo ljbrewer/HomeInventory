@@ -1,0 +1,23 @@
+INSERT INTO
+  locationTable (nameoflocation)
+VALUES("Living Room"),
+  ("Master Bedroom"),
+  ("Nursery"),
+  ("Bedroom1"),
+  ("Bedroom2"),
+  ("Bedroom3"),
+  ("Guest Bedroom"),
+  ("Dining Room"),
+  ("Kitchen"),
+  ("Pantry"),
+  ("Family Room"),
+  ("Formal Dining Room"),
+  ("Game Room"),
+  ("Office"),
+  ("Garage"),
+  ("MasterBath"),
+  ("Bath Room"),
+  ("Half Bath"),
+  ("Mud Room"),
+  ("Porch"),
+  ("Breakfast Nook")

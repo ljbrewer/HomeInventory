@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const {Asset,Home,User } = require('../models');
+const { Asset, Home, User } = require('../models');
 
 const ownerData = require('./ownerData.json');
 const homeData = require('./homeData.json');
@@ -13,16 +13,16 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-   const home = await Home.bulkCreate(homeData, {
+  const home = await Home.bulkCreate(homeData, {
     individualHooks: true,
     returning: true,git
   });
 
- const asset = await Asset.bulkCreate(assetData, {
+  const asset = await Asset.bulkCreate(assetData, {
     individualHooks: true,
     returning: true,
   });
-  
+
 
   process.exit(0);
 };

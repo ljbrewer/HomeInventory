@@ -15,7 +15,7 @@ const seedDatabase = async () => {
 
    const home = await Home.bulkCreate(homeData, {
     individualHooks: true,
-    returning: true,
+    returning: true,git
   });
 
  const asset = await Asset.bulkCreate(assetData, {

@@ -3,7 +3,7 @@ const { Home } = require('../../models');
 
 router.get('/:id', async (req, res) => {
     try {
-        const homeData = await User.findByPk(req.params.id);
+        const homeData = await Home.findByPk(req.params.id);
 
         if (!homeData) {
             res.status(404).json({ message: 'No home with this id!' });

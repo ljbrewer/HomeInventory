@@ -24,6 +24,10 @@ Asset.init(
         },
         state_id: {
             type: DataTypes.INTEGER,
+            references: {
+              model: 'state',
+              key: 'id',
+            },
         },
         price: {
             type: DataTypes.DECIMAL,
@@ -42,6 +46,18 @@ Asset.init(
         },
         category_id: {
             type: DataTypes.INTEGER,
+            references: {
+              model: 'category',
+              key: 'id',
+            },
+        },
+        location_id: {
+            type: DataTypes.INTEGER,
+            references: {
+              model: 'location',
+              key: 'id',
+            },
+
         },
         home_id: {
             type: DataTypes.INTEGER,

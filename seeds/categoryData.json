@@ -1,9 +1,26 @@
-[{"description": "Furniture" },
- {"description":  "Media Equipment" },
- {"description": "Sports Equipment" },
- {"description":  "Yard Equipment" },
- {"description":  "Kitchen Appliance" },
- {"description": "Exercise Equipment" },
- {"description": "Instrument" },
- {"description": "Computer Equipment" }
+[
+    {
+        "description": "Furniture"
+    },
+    {
+        "description": "Media Equipment"
+    },
+    {
+        "description": "Sports Equipment"
+    },
+    {
+        "description": "Yard Equipment"
+    },
+    {
+        "description": "Kitchen Appliance"
+    },
+    {
+        "description": "Exercise Equipment"
+    },
+    {
+        "description": "Instrument"
+    },
+    {
+        "description": "Computer Equipment"
+    }
 ]

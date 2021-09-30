@@ -10,39 +10,39 @@ const stateData = require('./stateData.json');
 
 const seedDatabase = async () => {
   try {
-  await sequelize.sync({ force: true });
+    await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(ownerData, {
-    individualHooks: true,
-    returning: true,
-  });
+    const users = await User.bulkCreate(ownerData, {
+      individualHooks: true,
+      returning: true,
+    });
 
-  const home = await Home.bulkCreate(homeData, {
-    individualHooks: true,
-    returning: true,
-  });
+    const home = await Home.bulkCreate(homeData, {
+      individualHooks: true,
+      returning: true,
+    });
 
-  const location = await Location.bulkCreate(locationData, {
-    individualHooks: true,
-    returning: true,
-  });
+    const location = await Location.bulkCreate(locationData, {
+      individualHooks: true,
+      returning: true,
+    });
 
-  const category = await Category.bulkCreate(categoryData, {
-    individualHooks: true,
-    returning: true,
-  });
+    const category = await Category.bulkCreate(categoryData, {
+      individualHooks: true,
+      returning: true,
+    });
 
-  const state = await State.bulkCreate(stateData, {
-    individualHooks: true,
-    returning: true,
-  });
+    const state = await State.bulkCreate(stateData, {
+      individualHooks: true,
+      returning: true,
+    });
 
-  const asset = await Asset.bulkCreate(assetData, {
-    individualHooks: true,
-    returning: true,
-  });
-  } catch (err){
-    console.log (err)
+    const asset = await Asset.bulkCreate(assetData, {
+      individualHooks: true,
+      returning: true,
+    });
+  } catch (err) {
+    console.log(err)
   }
 
   process.exit(0);

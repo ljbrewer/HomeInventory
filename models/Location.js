@@ -13,7 +13,7 @@ Location.init(
         },
         nameoflocation: {
             type: DataTypes.STRING,
-            
+
         },
     },
     {
@@ -24,5 +24,5 @@ Location.init(
         modelName: 'location',
     }
 );
-    
-module.exports = Location;  
+
+module.exports = Location;

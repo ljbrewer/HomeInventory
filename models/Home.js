@@ -51,7 +51,7 @@ Home.init(
             references: {
                 model: 'user',
                 key: 'id',
-              },
+            },
         }
     },
     {

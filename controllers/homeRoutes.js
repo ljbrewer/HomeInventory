@@ -21,7 +21,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/myhomes', withAuth, async (req, res) => {
+router.get('/myhomes', async (req, res) => {
   try {
 
     const userData = await User.findByPk(req.session.user_id, {

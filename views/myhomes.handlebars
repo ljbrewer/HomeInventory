@@ -1,0 +1,14 @@
+<div class="text-center">
+    <h1>My Homes</h1>
+    {{#each home as |home|}}
+    <h2>{{title}}</h2>
+    <p>{{description}}</p>
+    <p>Owner: {{user.name}} purchased on {{purchasedOn}}</p>
+    <p>
+       {{address1}}
+       {{address2}}
+       {{city}}, {{state}} {{postalcode}}
+       Insurance Policy Number: {{policyNumber}}
+    </p>
+</div>
+

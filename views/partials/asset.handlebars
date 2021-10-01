@@ -8,7 +8,7 @@
 <li>{{model}}</li>
 <li>{{serialno}}</li>
 <li>{{comments}}</li>
-<li>{{category_id}} is {{#with (lookup ../category.description @id }}</li>
-<li>{{state_id}} is {{#with (lookup ../state.stateType @id)}} </li>
-<li>{{location_id}} is {{#with (lookup ../location.nameoflocation @id</li>
+<li>{{category_id}} is {{#with (lookup ../category [description]}}</li>
+<li>{{state_id}} is {{#with (lookup ../state [stateType])}} </li>
+<li>{{location_id}} is {{#with (lookup ../location [nameoflocation]</li>
 </ul>

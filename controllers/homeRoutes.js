@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Asset, Home, User } = require('../models');
+const { Asset, Home, User, State, Category,Location } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -65,7 +65,7 @@ router.get('/assets', async (req, res) => {
 
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Home, as: 'homes', include: [{ model: Asset, as: 'assets' }] }],
+      include: [{ model: Home, as: 'homes', include: [{ model: Asset, as: 'assets'}] }],
     });
 
     const user = userData.get({ plain: true });

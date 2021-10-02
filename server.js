@@ -7,7 +7,7 @@ const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-const underscore = require('underscore');
+const _ = require('underscore');
 const morgan = require("morgan-body");
 
 const app = express();

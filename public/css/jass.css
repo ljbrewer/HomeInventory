@@ -191,6 +191,9 @@ button,
 [type='reset'],
 [type='submit'] {
   -webkit-appearance: button;
+  border-radius: 10px;
+  padding: 8px;
+  background: white;
 }
 
 /**
@@ -346,6 +349,10 @@ END NORMALIZE CSS
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+li {
+  margin: 10px;
 }
 
 html,

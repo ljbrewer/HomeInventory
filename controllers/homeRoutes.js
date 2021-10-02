@@ -50,7 +50,7 @@ router.get('/myhomes/:id/', async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render('homeassets', {
+    res.render('assets', {
       homeAssets: user.homes.assets,
     })
 

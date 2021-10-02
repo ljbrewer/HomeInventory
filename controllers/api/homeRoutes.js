@@ -1,4 +1,4 @@
-added const router = require('express').Router();
+const router = require('express').Router();
 const { Home } = require('../../models');
 
 router.get('/profile', (req,res) => {

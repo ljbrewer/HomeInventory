@@ -16,10 +16,9 @@ body {
     margin-left: 40%;
     font-size: 20px;
     font-weight: bolder;
-    border-radius: 5px;
-    background-color: rgb(79, 47, 218, 0.5);
+    border-radius: 15px;
+    background-color: white;
     width: 200px;
-    height: 100px;
 }
 
 .intro {
@@ -38,8 +37,13 @@ ul{
 }
 
 .footer{
-    background-color: aqua;
-
+    background-color: rgb(79, 47, 218, 0.5);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    color: black;
 }
 
 .home {
@@ -50,6 +54,5 @@ ul{
 .home:hover {
   text-decoration: none;
   color: inherit;
-
 
 }

@@ -3,6 +3,7 @@ const { Home } = require('../../models');
 const {withAuthApi} = require('../../utils/auth');
 
 router.get('/:id', withAuthApi, async (req, res) => {
+
     try {
         const homeData = await Home.findByPk(req.params.id);
 

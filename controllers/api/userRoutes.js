@@ -112,7 +112,7 @@ router.post('/logout', (req, res) => {
             res.redirect('/');
         });
     } else {
-        res.redirect('/');
+        return;
     }
 });
 

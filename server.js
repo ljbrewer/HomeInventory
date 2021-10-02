@@ -8,7 +8,7 @@ const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const underscore = require('underscore');
-
+const morgan = require("morgan-body");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -33,6 +33,9 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+morgan(app);
+
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {

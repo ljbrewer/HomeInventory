@@ -1,64 +1,68 @@
-<<!-- Loop over each object in the home array -->
+<<!-- Loop over each object in the asset array -->
 {{#each assets as |asset| }}
-<div class="row mb-4 Home">
+<div class="row mb-4 asset">
   <div class="col-md-5">
-    <h2>Homes
-      <a href="/myhomes/{{home.id}}">{{title}}</a>
+    <h2>Asset
+      <a href="/assets/{{asset.id}}">{{item}}</a>
     </h2>
-    <p>{{address1}}</p>
-    <p>{{address2}}</p>
-    <p>{{city}}, {{state}} {{postalcode}}</p>
-    <p>Owned by {{user.first_name}}</p>
-    <p> Insurance Policy: {{policyNumber}}</p>
-    <p>purchased on: {{purchasedOn}}</p>
+    <p>Description: {{description}}</p>
+    <p>Date Purchased: {{purchasedOn}}</p>
+    <p>Price Value: {{price}}</p>
+    <p>Current Value: {{currentValue}}</p> 
+    <p>Model #: {{postalcode}}</p>
+    <p>Serial #:  {{serialno}}</p>
+    <p>Location: {{nameoflocation}}</p>
+    <p>Condition: {{stateofitem}}</p>
+    <p>Category: {{category}}</p>
   </div>
   <div class="col-md-7">
-    <p>
-      {{home.description}}
-    </p>
   </div>
 </div>
 {{/each}}
 
 <div class="col-md-6">
-  <h2>Add a Home</h2>
+  <h2>Add a asset</h2>
 
-  <form class="form add-home-form">
+  <form class="form add-asset-form">
     <div class="form-group">
-      <label for="title-add-home">Title:</label>
-      <input class="form-input" type="text" id="title-add-home" />
+      <label for="item-add-asset">Item:</label>
+      <input class="form-input" type="text" id="item-add-asset" />
+    </div>
+<div class="form-group">
+  <label for="description-add-asset">Description:</label>
+  <input class="form-input" type="text" id="description-add-asset" />
+</div>  
+  <div class="form-group">
+      <label for="purchasedOn-add-asset">Purchase Date:</label>
+      <input class="form-input" type="date" id="purchasedOn-add-asset" />
     </div>
     <div class="form-group">
-      <label for="purchasedOn-add-home">Purchase Date:</label>
-      <input class="form-input" type="date" id="purchasedOn-add-home" />
+      <label for="location-add-asset">Location:</label>
+      <input class="form-input" type="date" id="Location-add-asset" />
     </div>
     <div class="form-group">
-      <label for="address1-add-home">Address 1:</label>
-      <input class="form-input" type="text" id="address1-add-home" />
+      <label for="state-add-asset">Condition of item:</label>
+      <input class="form-input" type="text" id="state-add-asset" />
     </div>
     <div class="form-group">
-      <label for="address2-add-home">Address 2:</label>
-      <input class="form-input" type="text" id="address2-add-home" />
+      <label for="price-add-asset">Price:</label>
+      <input class="form-input" type="text" id="price-add-asset" />
     </div>
     <div class="form-group">
-      <label for="city-add-home">City:</label>
-      <input class="form-input" type="text" id="city-add-home" />
+      <label for="currentvalue-add-asset">Current Value: </label>
+      <input class="form-input" type="text" id="currentvalue-add-asset" />
     </div>
     <div class="form-group">
-      <label for="state-add-home">State:</label>
-      <input class="form-input" type="text" id="state-add-home" />
+      <label for="model-add-asset">Model #:</label>
+      <input class="form-input" type="text" id="model-add-asset" />
     </div>
     <div class="form-group">
-      <label for="country-add-home">Country:</label>
-      <input class="form-input" type="text" id="country-add-home" />
+      <label for="serialno-add-asset">Serial #:</label>
+      <input class="form-input" type="text" id="serialno-add-asset" />
     </div>
     <div class="form-group">
-      <label for="postalcode-add-home">Postal Code:</label>
-      <input class="form-input" type="text" id="postalcode-add-home" />
-    </div>
-    <div class="form-group">
-      <label for="policyNumber-add-home">Policy #:</label>
-      <input class="form-input" type="text" id="policyNumber-add-home" />
+      <label for="Category-add-asset">Category: </label>
+      <input class="form-input" type="text" id="category-add-asset" />
     </div>
     <div class="form-group">
       <button class="btn btn-primary" type="submit">Signup</button>
@@ -66,4 +70,4 @@
   </form>
 </div>
 
-<script src="/js/addHome.js"></script>
+{{!-- <script src="/js/addasset.js"></script> --}}

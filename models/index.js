@@ -35,21 +35,22 @@ Asset.belongsTo(Location, {
 });
 
 Category.hasMany(Asset, {
-    foreignKey: 'location_id',
+    foreignKey: 'category_id',
     onDelete: 'Set Null'
 });
 
 Asset.belongsTo(Category, {
-    foreignKey: 'location_id'
+    foreignKey: 'category_id'
 });
 
 State.hasMany(Asset, {
-    foreignKey: 'location_id',
+    foreignKey: 'state_id',
     onDelete: 'Set Null'
 });
 
 Asset.belongsTo(State, {
-    foreignKey: 'location_id'
+    foreignKey: 'state_id',
+    as: 'status'
 });
 
 module.exports = { User, Home, Asset, Location, Category, State };

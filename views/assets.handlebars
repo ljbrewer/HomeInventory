@@ -1,0 +1,17 @@
+<h1>Assets</h1>
+<label for="search">Search by Asset</label>
+<input type="text" name="search" id="search" />
+<ul class="assetList">
+    {{#each assets as |asset|}}
+    {{> asset }}
+    {{/each}}
+</ul>
+
+<script>
+    document.querySelector('#search').addEventListener('keyup', (evt) => {
+        if (evt.key === 'Enter') {
+            const q = evt.target.value;
+            window.location.replace(`/search/title?q=${q}`);
+        }
+    })
+</script>

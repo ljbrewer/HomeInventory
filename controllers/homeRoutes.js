@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { Asset, Home, User } = require('../models');
+const { Asset, Home, User, State, Category,Location } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    res.render('homepage', {
+    res.render('homepage', {      
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -21,7 +21,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/myhomes', withAuth, async (req, res) => {
+router.get('/myhomes', async (req, res) => {
   try {
 
     const userData = await User.findByPk(req.session.user_id, {
@@ -65,7 +65,7 @@ router.get('/assets', async (req, res) => {
 
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Home, as: 'homes', include: [{ model: Asset, as: 'assets' }] }],
+      include: [{ model: Home, as: 'homes', include: [{ model: Asset, as: 'assets'}] }],
     });
 
     const user = userData.get({ plain: true });

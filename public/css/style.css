@@ -39,4 +39,17 @@ ul{
 
 .footer{
     background-color: aqua;
+
+}
+
+.home {
+  text-decoration: none;
+  color: inherit;
+}
+
+.home:hover {
+  text-decoration: none;
+  color: inherit;
+
+
 }

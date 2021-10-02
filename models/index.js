@@ -25,7 +25,6 @@ Asset.belongsTo(Home, {
     foreignKey: 'home_id'
 });
 
-
 Location.hasMany(Asset, {
     foreignKey: 'location_id',
     onDelete: 'Set Null'

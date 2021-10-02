@@ -4,6 +4,7 @@ const Asset = require("./Asset");
 const Location = require("./Location");
 const Category = require("./Category");
 const State = require("./State");
+const { response } = require("express");
 
 
 User.hasMany(Home, {
@@ -24,22 +25,21 @@ Asset.belongsTo(Home, {
     foreignKey: 'home_id'
 });
 
-
-Asset.belongsTo(Location, {
+Location.hasMany(Asset, {
     foreignKey: 'location_id',
     onDelete: 'Set Null'
 });
 
-Location.hasMany(Asset, {
+Asset.belongsTo(Location, {
     foreignKey: 'location_id'
 });
 
-Asset.hasMany(Category, {
+Category.hasMany(Asset, {
     foreignKey: 'category_id',
     onDelete: 'Set Null'
 });
 
-Category.belongsTo(Asset, {
+Asset.belongsTo(Category, {
     foreignKey: 'category_id'
 });
 

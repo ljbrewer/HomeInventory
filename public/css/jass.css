@@ -161,6 +161,7 @@ textarea {
   /* 1 */
   margin: 0;
   /* 2 */
+  border-radius: 10px;
 }
 
 /**
@@ -205,6 +206,7 @@ button::-moz-focus-inner,
 [type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
+  border-radius: 10px;
 }
 
 /**
@@ -215,6 +217,7 @@ button:-moz-focusring,
 [type='reset']:-moz-focusring,
 [type='submit']:-moz-focusring {
   outline: 1px dotted ButtonText;
+  border-radius: 10px;
 }
 
 /**
@@ -424,6 +427,7 @@ select,
 textarea,
 button {
   margin: 0;
+  border-radius: 10px;
 }
 
 a {

@@ -2,7 +2,7 @@
   {
     "item": "Table",
     "description": "Kitchen table. Queen Anne Style",
-    "home_id": 1
+     "home_id": 1
   },
   {
     "item": "Chairs",
@@ -12,26 +12,30 @@
   {
     "item": "Couch",
     "description": "Living Room Sofa",
-    "home_id": 1
+     "home_id": 1
   },
   {
     "item": "Recliner",
-    "description": "Living Room Recliner Brown",
+    "description": "Living Room Recliner Brown"
+    ,
     "home_id": 1
   },
   {
     "item": "Recliner Sofa",
-    "description": "Living Room Recliner Green",
-    "home_id": 2
+    "description": "Living Room Recliner Green"
+,
+    "home_id":2
   },
   {
     "item": "Recliner",
-    "description": "Living Room Recliner Blue",
+    "description": "Living Room Recliner Blue"
+,
     "home_id": 3
   },
   {
     "item": "Recliner",
-    "description": "Living Room Recliner Navy",
+    "description": "Living Room Recliner Navy"
+,
     "home_id": 4
   },
   {
@@ -54,4 +58,5 @@
     "description": "Kids bed",
     "home_id": 4
   }
+
 ]

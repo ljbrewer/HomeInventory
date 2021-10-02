@@ -1,65 +1,23 @@
 [
-  {
-    "nameoflocation": "Living Room"
-  },
-  {
-    "nameoflocation": "Master Bedroom"
-  },
-  {
-    "nameoflocation": "Nursery"
-  },
-  {
-    "nameoflocation": "Bedroom1"
-  },
-  {
-    "nameoflocation": "Bedroom2"
-  },
-  {
-    "nameoflocation": "Bedroom3"
-  },
-  {
-    "nameoflocation": "Guest Bedroom"
-  },
-  {
-    "nameoflocation": "Dining Room"
-  },
-  {
-    "nameoflocation": "Kitchen"
-  },
-  {
-    "nameoflocation": "Pantry"
-  },
-  {
-    "nameoflocation": "Family Room"
-  },
-  {
-    "nameoflocation": "Formal Dining Room"
-  },
-  {
-    "nameoflocation": "Game Room"
-  },
-  {
-    "nameoflocation": "Office"
-  },
-  {
-    "nameoflocation": "Garage"
-  },
-  {
-    "nameoflocation": "MasterBath"
-  },
-  {
-    "nameoflocation": "Bath Room"
-  },
-  {
-    "nameoflocation": "Half Bath"
-  },
-  {
-    "nameoflocation": "Mud Room"
-  },
-  {
-    "nameoflocation": "Porch"
-  },
-  {
-    "nameoflocation": "Breakfast Nook"
-  }
+  {"nameoflocation":"Living Room"},
+  {"nameoflocation":"Master Bedroom"},
+  {"nameoflocation":"Nursery"},
+  {"nameoflocation":"Bedroom1"},
+  {"nameoflocation":"Bedroom2"},
+  {"nameoflocation":"Bedroom3"},
+  {"nameoflocation":"Guest Bedroom"},
+  {"nameoflocation":"Dining Room"},
+  {"nameoflocation":"Kitchen"},
+  {"nameoflocation":"Pantry"},
+  {"nameoflocation":"Family Room"},
+  {"nameoflocation":"Formal Dining Room"},
+  {"nameoflocation":"Game Room"},
+  {"nameoflocation":"Office"},
+  {"nameoflocation":"Garage"},
+  {"nameoflocation":"MasterBath"},
+  {"nameoflocation":"Bath Room"},
+  {"nameoflocation":"Half Bath"},
+  {"nameoflocation":"Mud Room"},
+  {"nameoflocation":"Porch"},
+  {"nameoflocation":"Breakfast Nook"}
 ]

@@ -1,6 +1,8 @@
 DROP DATABASE IF EXISTS homeInventory_db;
 CREATE DATABASE homeInventory_db;
+
 -- USE homeInventory_db;
+
 -- CREATE TABLE ownerTable(
 --   id INT AUTO_INCREMENT PRIMARY KEY,
 --   first_name VARCHAR(30) NOT NULL,
@@ -11,6 +13,7 @@ CREATE DATABASE homeInventory_db;
 --   workPhone BIGINT,
 --   password VARCHAR(30)
 -- );
+
 -- CREATE Table homeTable (
 --     id int AUTO_INCREMENT PRIMARY KEY,
 --     title VARCHAR(30) NOT NULL,
@@ -22,21 +25,25 @@ CREATE DATABASE homeInventory_db;
 --     country VARCHAR(30) NOT NULL,
 --     postalcode VARCHAR(15) NOT NULL,
 --     policyNumber VARCHAR(30),
---     owner_id INT,
+--     owner_id INT, 
 --     FOREIGN KEY (owner_id) REFERENCES ownerTable(id) ON DELETE SET NULL
 -- );
+
 -- CREATE Table locationTable(
 --     id INT AUTO_INCREMENT PRIMARY KEY,
 --     nameoflocation VARCHAR(30)
 -- );
+
 -- CREATE Table category(
 --     id INT AUTO_INCREMENT PRIMARY KEY,
 --     description VARCHAR(100)
 -- );
+
 -- CREATE Table stateTable(
 --   id INT AUTO_INCREMENT PRIMARY KEY,
 --   stateType VARCHAR(15)
 -- );
+
 -- CREATE Table assetTable (
 --     id INT AUTO_INCREMENT PRIMARY KEY,
 --     item VARCHAR(30) NOT NULL,

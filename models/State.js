@@ -13,7 +13,7 @@ State.init(
         },
         stateType: {
             type: DataTypes.STRING,
-
+            
         },
     },
     {
@@ -24,5 +24,5 @@ State.init(
         modelName: 'state',
     }
 );
-
-module.exports = State;
+    
+module.exports = State;  

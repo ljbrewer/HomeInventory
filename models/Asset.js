@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Asset extends Model { };
+class Asset extends Model {};
 
 Asset.init(
     {
@@ -25,8 +25,8 @@ Asset.init(
         state_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'state',
-                key: 'id',
+              model: 'state',
+              key: 'id',
             },
         },
         price: {
@@ -47,23 +47,23 @@ Asset.init(
         category_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'category',
-                key: 'id',
+              model: 'category',
+              key: 'id',
             },
         },
         location_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'location',
-                key: 'id',
+              model: 'location',
+              key: 'id',
             },
 
         },
         home_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'home',
-                key: 'id',
+              model: 'home',
+              key: 'id',
             },
         }
     },

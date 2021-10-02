@@ -69,9 +69,9 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
- 
-    try {
+router.post('/login', async (req, res) => {
 
+    try {
         const userData = await User.findOne({ where: { email: req.body.email } });
 
         if (!userData) {
@@ -99,12 +99,10 @@ router.delete('/:id', async (req, res) => {
             res.json({ user: userData, message: 'You are now logged in!' });
         });
 
-
     } catch (err) {
         console.log(err)
         res.status(400).json(err);
     }
-
 });
 
 router.get('/logout', (req, res) => {

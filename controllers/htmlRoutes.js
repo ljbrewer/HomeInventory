@@ -1,11 +1,12 @@
 const router = require('express').Router();
 const { Asset, Home, User, State, Category, Location } = require('../models');
-const  { withAuth } = require('../utils/auth');
- 
+const { withAuth } = require('../utils/auth');
+
 router.get('/', async (req, res) => {
   try {
-    res.render('homepage', {      
-      logged_in: req.session.logged_in
+    res.render('homepage', {
+      logged_in: req.session.logged_in,
+      userEmail: user.email,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -15,7 +16,8 @@ router.get('/', async (req, res) => {
 
 router.get('/profile', withAuth, (req, res) => {
   res.render('profile', {
-    logged_in: req.session.logged_in
+    logged_in: req.session.logged_in,
+    userEmail: user.email,
   })
 })
 
@@ -40,7 +42,8 @@ router.get('/myhomes', withAuth, async (req, res) => {
 
     res.render('myhomes', {
       homes: user.homes,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
+      userEmail: user.email,
     });
 
   } catch (err) {
@@ -60,7 +63,8 @@ router.get('/myhomes/:id/', withAuth, async (req, res) => {
 
     res.render('assets', {
       homeAssets: user.homes.assets,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
+      userEmail: user.email,
     })
 
   } catch (err) {
@@ -74,7 +78,7 @@ router.get('/assets', withAuth, async (req, res) => {
 
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Home, as: 'homes', include: [{ model: Asset, as: 'assets', include: [{ model: Location, as: 'location'}, { model: Category, as: 'category'}, { model: State, as: 'status'}]}] }],
+      include: [{ model: Home, as: 'homes', include: [{ model: Asset, as: 'assets', include: [{ model: Location, as: 'location' }, { model: Category, as: 'category' }, { model: State, as: 'status' }] }] }],
     });
 
     const user = userData.get({ plain: true });
@@ -91,7 +95,8 @@ router.get('/assets', withAuth, async (req, res) => {
 
     res.render('assets', {
       assets,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
+      userEmail: user.email,
     });
 
   } catch (err) {

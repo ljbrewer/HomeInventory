@@ -32,6 +32,7 @@ const signupFormHandler = async (event) => {
   const primaryPhone = document.querySelector('#phone-signup').value.trim();
 
   if (first_name && last_name && primaryPhone && email && password) {
+   
     const response = await fetch('/api/users', {
       method: 'POST',
       body: JSON.stringify({ first_name, last_name, primaryPhone, email, password }),
@@ -39,13 +40,13 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-
+    
       document.location.replace('/profile');
     } else {
       alert(response.statusText);
     }
   } else {
-    // xx fields are required
+    console.log(3)// xx fields are required
   }
 };
 

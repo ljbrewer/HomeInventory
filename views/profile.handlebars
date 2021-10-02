@@ -1,9 +1,8 @@
 <h1>Welcome</h1>
-{{#each user as |user| }}
+{{#if if (req.session.logged_in)}}
 <div class="row mb-4 Home">
   <div class="col-md-5">
-    <h2>User Info
-    </h2>
+    <h2>User Info</h2>
     <p>{{first_name}}</p>
     <p>{{last_name}}</p>
     <p>{{email}}</p>
@@ -12,5 +11,5 @@
     <p>{{workPhone}}</p>
   </div>
 </div>
-{{/each}}
+{{/if}}
 <script src="/js/profile.js"></script>

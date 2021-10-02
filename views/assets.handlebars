@@ -1,17 +1,69 @@
-<h1>Assets</h1>
-<label for="search">Search by Asset</label>
-<input type="text" name="search" id="search" />
-<ul class="assetList">
-    {{#each assets as |asset|}}
-    {{> asset }}
-    {{/each}}
-</ul>
+<<!-- Loop over each object in the home array -->
+{{#each assets as |asset| }}
+<div class="row mb-4 Home">
+  <div class="col-md-5">
+    <h2>Homes
+      <a href="/myhomes/{{home.id}}">{{title}}</a>
+    </h2>
+    <p>{{address1}}</p>
+    <p>{{address2}}</p>
+    <p>{{city}}, {{state}} {{postalcode}}</p>
+    <p>Owned by {{user.first_name}}</p>
+    <p> Insurance Policy: {{policyNumber}}</p>
+    <p>purchased on: {{purchasedOn}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{home.description}}
+    </p>
+  </div>
+</div>
+{{/each}}
 
-<script>
-    document.querySelector('#search').addEventListener('keyup', (evt) => {
-        if (evt.key === 'Enter') {
-            const q = evt.target.value;
-            window.location.replace(`/search/title?q=${q}`);
-        }
-    })
-</script>
+<div class="col-md-6">
+  <h2>Add a Home</h2>
+
+  <form class="form add-home-form">
+    <div class="form-group">
+      <label for="title-add-home">Title:</label>
+      <input class="form-input" type="text" id="title-add-home" />
+    </div>
+    <div class="form-group">
+      <label for="purchasedOn-add-home">Purchase Date:</label>
+      <input class="form-input" type="date" id="purchasedOn-add-home" />
+    </div>
+    <div class="form-group">
+      <label for="address1-add-home">Address 1:</label>
+      <input class="form-input" type="text" id="address1-add-home" />
+    </div>
+    <div class="form-group">
+      <label for="address2-add-home">Address 2:</label>
+      <input class="form-input" type="text" id="address2-add-home" />
+    </div>
+    <div class="form-group">
+      <label for="city-add-home">City:</label>
+      <input class="form-input" type="text" id="city-add-home" />
+    </div>
+    <div class="form-group">
+      <label for="state-add-home">State:</label>
+      <input class="form-input" type="text" id="state-add-home" />
+    </div>
+    <div class="form-group">
+      <label for="country-add-home">Country:</label>
+      <input class="form-input" type="text" id="country-add-home" />
+    </div>
+    <div class="form-group">
+      <label for="postalcode-add-home">Postal Code:</label>
+      <input class="form-input" type="text" id="postalcode-add-home" />
+    </div>
+    <div class="form-group">
+      <label for="policyNumber-add-home">Policy #:</label>
+      <input class="form-input" type="text" id="policyNumber-add-home" />
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">Signup</button>
+    </div>
+  </form>
+</div>
+
+<script src="/js/addHome.js"></script>

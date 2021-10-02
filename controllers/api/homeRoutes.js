@@ -1,5 +1,9 @@
-const router = require('express').Router();
+added const router = require('express').Router();
 const { Home } = require('../../models');
+
+router.get('/profile', (req,res) => {
+    res.render('profile')
+})
 
 router.get('/:id', async (req, res) => {
     try {

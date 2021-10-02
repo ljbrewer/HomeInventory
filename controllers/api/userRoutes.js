@@ -70,7 +70,7 @@ router.delete('/:id', async (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
-    try {
+    // try {
         const userData = await User.findOne({ where: { email: req.body.email } });
 
         if (!userData) {
@@ -96,18 +96,19 @@ router.post('/login', async (req, res) => {
             res.json({ user: userData, message: 'You are now logged in!' });
         });
 
-    } catch (err) {
-        res.status(400).json(err);
-    }
+    // } catch (err) {
+    //     res.status(400).json(err);
+    // }
 });
 
-router.post('/logout', (req, res) => {
+router.get('/logout', (req, res) => {
+    console.log('logout')
     if (req.session.logged_in) {
         req.session.destroy(() => {
-            res.status(204).end();
+            res.redirect('/');
         });
     } else {
-        res.status(404).end();
+        res.redirect('/');
     }
 });
 

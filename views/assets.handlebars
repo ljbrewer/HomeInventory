@@ -1,17 +1,73 @@
-<h1>Assets</h1>
-<label for="search">Search by Asset</label>
-<input type="text" name="search" id="search" />
-<ul class="assetList">
-    {{#each assets as |asset|}}
-    {{> asset }}
-    {{/each}}
-</ul>
+<<!-- Loop over each object in the asset array -->
+{{#each assets as |asset| }}
+<div class="row mb-4 asset">
+  <div class="col-md-5">
+    <h2>Asset
+      <a href="/assets/{{asset.id}}">{{item}}</a>
+    </h2>
+    <p>Description: {{description}}</p>
+    <p>Date Purchased: {{purchasedOn}}</p>
+    <p>Price Value: {{price}}</p>
+    <p>Current Value: {{currentValue}}</p> 
+    <p>Model #: {{postalcode}}</p>
+    <p>Serial #:  {{serialno}}</p>
+    <p>Location: {{nameoflocation}}</p>
+    <p>Condition: {{stateofitem}}</p>
+    <p>Category: {{category}}</p>
+  </div>
+  <div class="col-md-7">
+  </div>
+</div>
+{{/each}}
 
-<script>
-    document.querySelector('#search').addEventListener('keyup', (evt) => {
-        if (evt.key === 'Enter') {
-            const q = evt.target.value;
-            window.location.replace(`/search/title?q=${q}`);
-        }
-    })
-</script>
+<div class="col-md-6">
+  <h2>Add a asset</h2>
+
+  <form class="form add-asset-form">
+    <div class="form-group">
+      <label for="item-add-asset">Item:</label>
+      <input class="form-input" type="text" id="item-add-asset" />
+    </div>
+<div class="form-group">
+  <label for="description-add-asset">Description:</label>
+  <input class="form-input" type="text" id="description-add-asset" />
+</div>  
+  <div class="form-group">
+      <label for="purchasedOn-add-asset">Purchase Date:</label>
+      <input class="form-input" type="date" id="purchasedOn-add-asset" />
+    </div>
+    <div class="form-group">
+      <label for="location-add-asset">Location:</label>
+      <input class="form-input" type="date" id="Location-add-asset" />
+    </div>
+    <div class="form-group">
+      <label for="state-add-asset">Condition of item:</label>
+      <input class="form-input" type="text" id="state-add-asset" />
+    </div>
+    <div class="form-group">
+      <label for="price-add-asset">Price:</label>
+      <input class="form-input" type="text" id="price-add-asset" />
+    </div>
+    <div class="form-group">
+      <label for="currentvalue-add-asset">Current Value: </label>
+      <input class="form-input" type="text" id="currentvalue-add-asset" />
+    </div>
+    <div class="form-group">
+      <label for="model-add-asset">Model #:</label>
+      <input class="form-input" type="text" id="model-add-asset" />
+    </div>
+    <div class="form-group">
+      <label for="serialno-add-asset">Serial #:</label>
+      <input class="form-input" type="text" id="serialno-add-asset" />
+    </div>
+    <div class="form-group">
+      <label for="Category-add-asset">Category: </label>
+      <input class="form-input" type="text" id="category-add-asset" />
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">Signup</button>
+    </div>
+  </form>
+</div>
+
+{{!-- <script src="/js/addasset.js"></script> --}}

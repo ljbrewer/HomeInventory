@@ -24,31 +24,30 @@ Asset.belongsTo(Home, {
     foreignKey: 'home_id'
 });
 
-
-Asset.hasMany(Location, {
+Location.hasMany(Asset, {
     foreignKey: 'location_id',
     onDelete: 'Set Null'
 });
 
-Location.belongsTo(Asset, {
+Asset.belongsTo(Location, {
     foreignKey: 'location_id'
 });
 
-Asset.hasMany(Category, {
+Category.hasMany(Asset, {
     foreignKey: 'category_id',
     onDelete: 'Set Null'
 });
 
-Category.belongsTo(Asset, {
+Asset.belongsTo(Category, {
     foreignKey: 'category_id'
 });
 
-Asset.hasMany(State, {
+State.hasMany(Asset, {
     foreignKey: 'state_id',
     onDelete: 'Set Null'
 });
 
-State.belongsTo(Asset, {
+Asset.belongsTo(State, {
     foreignKey: 'state_id',
     as: 'status'
 });

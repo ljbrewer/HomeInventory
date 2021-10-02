@@ -1,11 +1,9 @@
 const router = require('express').Router();
 const { Home } = require('../../models');
+const {withAuthApi} = require('../../utils/auth');
 
-router.get('/profile', (req,res) => {
-    res.render('profile')
-})
+router.get('/:id', withAuthApi, async (req, res) => {
 
-router.get('/:id', async (req, res) => {
     try {
         const homeData = await Home.findByPk(req.params.id);
 
@@ -21,9 +19,9 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-router.post('/', async (req, res) => {
+router.post('/', withAuthApi, async (req, res) => {
     try {
-        const homeData = await Home.create(req.body);
+        const homeData = await Home.create({...req.body, owner_id: req.session.user_id});
 
         res.status(200).json(homeData);
 
@@ -32,7 +30,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', withAuthApi, async (req, res) => {
     try {
         const homeData = await Home.update({
             where: {
@@ -50,7 +48,7 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuthApi, async (req, res) => {
     try {
         const homeData = await Home.destroy({
             where: {

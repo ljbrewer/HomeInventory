@@ -1,9 +1,5 @@
 const path = require('path');
-<<<<<<< HEAD
-//require('dotenv').config
-=======
 require('dotenv').config();
->>>>>>> main
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');

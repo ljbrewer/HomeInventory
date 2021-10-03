@@ -1,23 +1,26 @@
+<div class="row">
 <h1>Welcome</h1>
+<div class="col-md-6">
 {{#if logged_in}}
-<div class="row mb-4 Home">
-  <div class="col-md-5">
-    <h2>User Info
-        <a href="/user/{{user.id}}">{{first_name}}</a>
-    </h2>
+  <div class="section">
+    <h4>User Info
+        <a href="/User/{{user.id}}">{{first_name}}</a>
+    </h4>
     <p>First Name: {{user.first_name}}</p>
     <p>Last Name: {{user.last_name}}</p>
     <p>Email: {{user.email}}</p>
     <p>Primary Phone: {{user.primaryPhone}}</p>
     <p>Cell Phone: {{user.cellPhone}}</p>
     <p>Work Phone: {{user.workPhone}}</p>
+    {{/if}}
   </div>
-</div>
-{{/if}}
+  </div>
+
 
 <div class="col-md-6">
-  <h2>Update User Info</h2>
-
+  
+<div class="section">
+    <h4>Update User Info</h4>
   <form class="form add-home-form">
     <div class="form-group">
       <label for="userFirstName-update">First Name:</label>
@@ -47,6 +50,13 @@
       <label for="user-Password">Password:</label>
       <input class="form-input" type="text" id="user-Password" />
     </div>
+          <div class="form-group">
+        <button class="btn btn-primary" type="submit">Update User Info</button>
+      </div>
   </form>
+  </div>
 </div>
+
+</div>
+
 <script src="/js/profile.js"></script>

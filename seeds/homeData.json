@@ -3,41 +3,49 @@
         "title":"Sal's Main Home",
         "purchasedOn": "1975-12-05",
         "address1": "1234 Home Street",
+        "address2": "",
         "city": "Los Angeles",
         "state": "CA",
         "country": "USA",
         "postalcode": "95818",
-        "owner_id":1
+        "policyNumber":"kji45871",
+        "owner_id":2
     },
      {
         "title":"Sal's 2nd Home",
         "purchasedOn": "1995-09-05",
         "address1": "12345 Home Street",
+        "address2":"",
         "city": "Los Angeles",
         "state": "CA",
         "country": "USA",
-        "postalcode": "95818",
-        "owner_id":1
+        "postalcode": "95628",
+        "policyNumber":"wso524871",
+        "owner_id":2
     },
      {
         "title":"Lernantino's Main Home",
         "purchasedOn": "1995-07-05",
         "address1": "12354 Home Street",
+        "address2":"",
         "city": "Los Angeles",
         "state": "CA",
         "country": "USA",
-        "postalcode": "95818",
-        "owner_id":2
+        "postalcode": "92818",
+        "policyNumber":"lko52483",
+        "owner_id":3
     }, 
     {
         "title":"Amiko's Main Home",
         "purchasedOn": "1980-07-05",
         "address1": "12364 Home Street",
         "city": "Los Angeles",
+        "address2":"",
         "state": "CA",
         "country": "USA",
-        "postalcode": "95818",
-        "owner_id":3
+        "postalcode": "95218",
+         "policyNumber":"kji454521",
+        "owner_id":1
     }
 
 ]

@@ -4,20 +4,26 @@
     "last_name": "Brewer",
     "email": "sal@hotmail.com",
     "password": "password12345",
-    "primaryPhone": 19167595808
+    "primaryPhone": 19167595808,
+    "cellPhone": 1234567893,
+    "workPhone": 1472583695
   },
   {
     "first_name": "Lernantino",
     "last_name": "Aimone",
     "email": "lernantino@gmail.com",
     "password": "password12345",
-    "primaryPhone": 19167595809
+    "primaryPhone": 19167595809,
+    "cellPhone": 1692581472,
+    "workPhone": 18527419634
   },
   {
     "first_name": "Amiko",
     "last_name": "Tamar",
     "email": "amiko2k20@aol.com",
     "password": "password12345",
-    "primaryPhone": 19167595810
+    "primaryPhone": 19167595810,
+    "cellPhone": 1456321987,
+    "workPhone": 19516238746
   }
 ]

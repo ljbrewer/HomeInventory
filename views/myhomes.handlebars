@@ -7,15 +7,8 @@
   <p>{{address1}}</p>
   <p>{{address2}}</p>
   <p>{{city}}, {{state}} {{postalcode}}</p>
-  <p>Owned by {{user.first_name}}</p>
-  <p> Insurance Policy: {{policyNumber}}</p>
-  <p>purchased on: {{purchasedOn}}</p>
-  <p>
-    {{home.description}}
-  </p>
-    <p>
-      {{home.description}}
-    </p>
+  <p>Insurance Policy: {{policyNumber}}</p>
+  <p>purchased on: {{format_date purchasedOn}}</p>
   </div>
     {{/each}}
 </div>
@@ -65,7 +58,7 @@
       <input class="form-input" type="text" id="policyNumber-add-home" />
     </div>
     <div class="form-group">
-      <button class="btn btn-primary" type="submit">Signup</button>
+      <button class="btn btn-primary" type="submit">Add</button>
       </div>
   </form>
   </div>

@@ -13,7 +13,7 @@ const morgan = require("morgan-body");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const hbs = exphbs.create(); // .create({ helpers })
+const hbs = exphbs.create({helpers}); // .create({ helpers })
 
 const sesh = {
     secret: 'CHANGEME',

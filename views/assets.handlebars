@@ -1,10 +1,8 @@
 <!-- Loop over each object in the asset array -->
 <div class="row">
-<div class="col-md-6">
-{{#each assets as |asset| }}
-    <h2>Asset
-      <a href="/assets/{{asset.id}}">{{item}}</a>
-    </h2>
+  <div class="col-md-6">
+  {{#each assets as |asset| }}
+    <h2>Asset <a href="/assets/{{asset.id}}">{{item}}</a>    </h2>
     <p>Description: {{description}}</p>
     <p>Date Purchased: {{purchasedOn}}</p>
     <p>Price Value: {{price}}</p>
@@ -17,6 +15,7 @@
   </div>
   <div class="col-md-7">
   </div>
+  {{/each}}
 </div>
 
 
@@ -69,6 +68,6 @@
     </div>
   </form>
 </div>
-</div>
+
 
 <script src="/js/addAsset.js"></script>

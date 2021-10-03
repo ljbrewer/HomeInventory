@@ -3,9 +3,7 @@
 <div class="col-md-6">
 {{#each assets as |asset| }}
   <div class="section">
-    <h4>
-      <a href="/assets/{{asset.id}}">{{item}}</a>
-    </h4>
+    <h4>{{item}}</h4>
     <p>Description: {{description}}</p>
     <p>Date Purchased: {{format_date purchasedOn}}</p>
     <p>Price<span for="img" aria-label="money">💲</span>

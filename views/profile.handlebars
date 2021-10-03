@@ -1,24 +1,27 @@
+<div class="row">
 <h1>Welcome</h1>
-{{#if (req.session.logged_in)}}
-console.log(1)
-<div class="row mb-4 Home">
-  <div class="col-md-5">
-    <h2>User Info
+<div class="col-md-6">
+{{#if logged_in}}
+  <div class="section">
+
+    <h4>User Info
         <a href="/User/{{user.id}}">{{first_name}}</a>
-    </h2>
-    <p>First Name: {{first_name}}</p>
-    <p>Last Name: {{last_name}}</p>
-    <p>Email: {{email}}</p>
-    <p>Primary Phone: {{primaryPhone}}</p>
-    <p>Cell Phone: {{cellPhone}}</p>
-    <p>Work Phone: {{workPhone}}</p>
+    </h4>
+    <p>First Name: {{user.first_name}}</p>
+    <p>Last Name: {{user.last_name}}</p>
+    <p>Email: {{user.email}}</p>
+    <p>Primary Phone: {{user.primaryPhone}}</p>
+    <p>Cell Phone: {{user.cellPhone}}</p>
+    <p>Work Phone: {{user.workPhone}}</p>
+    {{/if}}
   </div>
-</div>
-{{/if}}
+  </div>
+
 
 <div class="col-md-6">
-  <h2>Update User Info</h2>
-
+  
+<div class="section">
+    <h4>Update User Info</h4>
   <form class="form add-home-form">
     <div class="form-group">
       <label for="userFirstName-update">First Name:</label>
@@ -48,7 +51,12 @@ console.log(1)
       <label for="user-Password">Password:</label>
       <input class="form-input" type="text" id="user-Password" />
     </div>
+          <div class="form-group">
+        <button class="btn btn-primary" type="submit">Update User Info</button>
+      </div>
   </form>
+  </div>
 </div>
-console.log(2)
+</div>
+
 <script src="/js/profile.js"></script>

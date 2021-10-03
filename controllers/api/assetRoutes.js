@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const { Asset } = require('../../models');
+const { withAuthApi } = require('../../utils/auth');
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuthApi, async (req, res) => {
     try {
         const assetData = await Asset.findByPk(req.params.id);
 
@@ -17,9 +18,9 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-router.post('/', async (req, res) => {
+router.post('/', withAuthApi, async (req, res) => {
     try {
-        const assetData = await Asset.create(req.body);
+        const assetData = await Asset.create({...req.body, owner_id: req.session.user_id});
 
         res.status(200).json(assetData);
 
@@ -28,7 +29,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', withAuthApi, async (req, res) => {
     try {
         const assetData = await Asset.update({
             where: {
@@ -46,7 +47,7 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuthApi, async (req, res) => {
     try {
         const assetData = await Asset.destroy({
             where: {

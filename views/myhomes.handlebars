@@ -3,7 +3,7 @@
 <div class="col-md-6">
   {{#each homes as |home| }}
   <div class="section">
-  <h4>{{title}}</h4>
+  <h4>{{title}} - DB ID#{{home.id}}</h4>
   <p>{{address1}}</p>
   <p>{{address2}}</p>
   <p>{{city}}, {{state}} {{postalcode}}</p>
@@ -58,7 +58,7 @@
       <input class="form-input" type="text" id="policyNumber-add-home" />
     </div>
     <div class="form-group">
-      <button class="btn btn-primary" type="submit">Add</button>
+      <button class="btn btn-primary" type="submit">Add Home</button>
       </div>
   </form>
   </div>

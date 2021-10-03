@@ -91,8 +91,9 @@ router.get('/myhomes/:id/', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render('assets', {
+    res.render('myhomes', {
       user,
+      homes: user.homes,
       homeAssets: user.homes.assets,
       logged_in: req.session.logged_in,
     })
@@ -105,7 +106,7 @@ router.get('/myhomes/:id/', withAuth, async (req, res) => {
 
 router.get('/assets', withAuth, async (req, res) => {
   try {
-
+    console.log(req.body, "asset")
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: Home, as: 'homes', include: [{ model: Asset, as: 'assets', include: [{ model: Location, as: 'location'}, { model: Category, as: 'category' }, { model: State, as: 'status'}] }] }],
@@ -124,10 +125,11 @@ router.get('/assets', withAuth, async (req, res) => {
     }, []);
 
     res.render('assets', {
+      user,
       assets,
+      homes:user.homes,
       logged_in: req.session.logged_in,
-      user
-    });
+     });
 
   } catch (err) {
     console.log(err)

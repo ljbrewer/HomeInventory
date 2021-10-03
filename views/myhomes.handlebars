@@ -1,4 +1,19 @@
-<!-- Loop over each object in the home array -->
+<div class="row">
+<h1>Homes</h1>
+<div class="col-md-6">
+  {{#each homes as |home| }}
+  <div class="section">
+  <h4><a href="/myhomes/{{home.id}}">{{title}}</a></h4>
+  <p>{{address1}}</p>
+  <p>{{address2}}</p>
+  <p>{{city}}, {{state}} {{postalcode}}</p>
+  <p>Owned by {{user.first_name}}</p>
+  <p> Insurance Policy: {{policyNumber}}</p>
+  <p>purchased on: {{purchasedOn}}</p>
+  <p>
+    {{home.description}}
+  </p>
+{{!-- <!-- Loop over each object in the home array -->
 {{#each homes as |home| }}
 <div class="row mb-4 Home">
   <div class="col-md-5">
@@ -17,12 +32,16 @@
       {{home.description}}
     </p>
   </div>
-</div>
-{{/each}}
+    {{/each}}
+</div> --}}
+
+ 
+
 
 <div class="col-md-6">
-  <h2>Add a Home</h2>
-
+  
+<div class="section">
+  <h4>Add a Home</h4>
   <form class="form add-home-form">
     <div class="form-group">
       <label for="title-add-home">Title:</label>
@@ -62,8 +81,9 @@
     </div>
     <div class="form-group">
       <button class="btn btn-primary" type="submit">Signup</button>
-    </div>
+      </div>
   </form>
+  </div>
 </div>
-
+</div>
 <script src="/js/addHome.js"></script>

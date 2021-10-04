@@ -17,6 +17,6 @@ While we like what our application can do, there’s always room for improvement
 <li><b>More Options for Renters</b> This app is geared towards homeowners, we would like to make functionality for renters and even renters who happen to have the same address. For example, multiple people living in one unit.</li>
 <li><b>Export a Report</b> We would like to create a function where a user can export a list of the items in their home.</li>
 <li><b>Populate Location</b> When a user goes to type in thier location, they will be able to choose thier city and location from a dropdown menu.</li>
-<li><b>Choose Categories</b> With more time, we would like to create dropdown menus for a user so they can choose from specific asset category and then be able to view assets by category.</li>
+<li><b>Choose Categories</b> For a user to choose from specific asset category and then be able to view assets by category.</li>
 <li><b>Link Assets to Homes</b> Currently we only have assets linked to users, not specific homes. Moving forward we would like to linke assets to homes and users.</li>
 </ul>

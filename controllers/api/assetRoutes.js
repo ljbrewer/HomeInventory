@@ -19,7 +19,7 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        const assetData = await Asset.create(req.body);
+        const assetData = await Asset.create({...req.body, owner_id: req.session.user_id});
 
         res.status(200).json(assetData);
 

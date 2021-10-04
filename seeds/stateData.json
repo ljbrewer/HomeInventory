@@ -1,9 +1,9 @@
 
-[{"stateType":"New"},
-  {"stateType":"Like New"},
-  {"stateType":"Very Good"},
-  {"stateType":"Good"},
-  {"stateType":"Fair"},
-  {"stateType":"Needs Work"},
-  {"stateType":"Poor"}
+[{"state_id":"New"},
+  {"state_id":"Like New"},
+  {"state_id":"Very Good"},
+  {"state_id":"Good"},
+  {"state_id":"Fair"},
+  {"state_id":"Needs Work"},
+  {"state_id":"Poor"}
 ]

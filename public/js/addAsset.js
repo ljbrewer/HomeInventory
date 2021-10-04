@@ -4,7 +4,7 @@ const addAssetFormHandler = async (event) => {
   const item = document.querySelector('#item-add-asset').value.trim();
   const description = document.querySelector('#description-add-asset').value.trim();
   const purchasedOn = document.querySelector('#purchasedOn-add-asset').value.trim();
-  const location_id = document.querySelector('#Location-add-asset').value.trim();
+  const location_id = document.querySelector('#location-add-asset').value.trim();
   const state_id = document.querySelector('#state-add-asset').value.trim();
   const price = document.querySelector('#price-add-asset').value.trim();
   const currentValue = document.querySelector('#currentvalue-add-asset').value.trim();
@@ -36,8 +36,8 @@ const addAssetFormHandler = async (event) => {
 
 const deleteAsset = async (event) => {
   event.preventDefault();
-  if (event.target.hasAttribute('asset-id')) {
-    const id = event.target.getAttribute('asset-id');
+  if (event.target.hasAttribute('data-id')) {
+    const id = event.target.getAttribute('data-id');
 
     const response = await fetch(`/api/asset/${id}`, {
       method: 'DELETE',
@@ -56,6 +56,12 @@ document
   .querySelector('.add-asset-form')
   .addEventListener('submit', addAssetFormHandler);
 
-document
-  .querySelector('.deleteBtn')
-  .addEventListener('click', deleteAsset);
+var deleteBtn=document
+  .querySelectorAll('.deleteBtn')
+
+  for (let i = 0; i < deleteBtn.length; i++) {
+    deleteBtn[i].addEventListener('click', deleteAsset);
+
+    
+  }
+ 

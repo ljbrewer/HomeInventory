@@ -1,4 +1,22 @@
 <div class="row">
+
+  <h1>Assets</h1>
+  <div class="col-md-6">
+    {{#each assets as |asset| }}
+    <div class="section">
+      <h4>
+        <a href="/assets/{{asset.id}}">{{item}}</a>
+      </h4>
+      <p>Description: {{description}}</p>
+      <p>Date Purchased: {{purchasedOn}}</p>
+      <p>Price Value: {{price}}</p>
+      <p>Current Value: {{currentValue}}</p>
+      <p>Model #: {{model}}</p>
+      <p>Serial #: {{serialno}}</p>
+      <p>Location: {{location.nameoflocation}}</p>
+      <p>Condition: {{status.stateType}}</p>
+      <p>Category: {{category.description}}</p>
+
   <h1>My Assets</h1>
   <div class="col-md-6">
     {{#each assets as |asset| }}
@@ -55,11 +73,41 @@
         </div>
         <div class="form-group">
           <label for="location-add-asset">Location:</label>
-          <input class="form-input" type="text" id="Location-add-asset" />
+          <select class="form-input"  id="location-add-asset">
+            <option value="1">Living Room</option>
+            <option value="2">Master Bedroom</option>
+            <option value="3">Nursury</option>
+            <option value="4">Bedroom 1</option>
+            <option value="5">Bedroom 2</option>
+            <option value="6">Bedroom 3</option>
+            <option value="7">Guest Bedroom</option>
+            <option value="8">Dining Room</option> 
+            <option value="9">Kitchen</option>
+            <option value="10">Pantry</option>
+            <option value="11">Family Room</option>
+            <option value="12">Formal Dining Room</option>
+            <option value="13">Game Room</option>            
+            <option value="14">Office</option>
+            <option value="15">Garage</option>
+            <option value="16">Bathroom</option>
+            <option value="17">Master Bath</option>
+            <option value="18">Half Bath</option>
+            <option value="19">Mud Room</option>
+            <option value="20">Porch</option>
+            <option value="21">Breakfast Nook</option>
+          </select>
         </div>
         <div class="form-group">
           <label for="state-add-asset">Condition of item:</label>
-          <input class="form-input" type="text" id="state-add-asset" />
+          <select class="form-input"  id="state-add-asset">
+            <option value="1">New</option>
+            <option value="2">Fair</option>
+            <option value="3">Like New</option>
+            <option value="4">Good </option>
+            <option value="5">Very Good</option>
+            <option value="6">Needs Work</option>
+            <option value="7">Poor</option>            
+          </select>
         </div>
         <div class="form-group">
           <label for="price-add-asset">Price:</label>
@@ -79,7 +127,16 @@
         </div>
         <div class="form-group">
           <label for="Category-add-asset">Category: </label>
-          <input class="form-input" type="text" id="category-add-asset" />
+          <select class="form-input"  id="category-add-asset">
+            <option value="1">Furniture</option>
+            <option value="2">Media Equipment</option>
+            <option value="3">Sports Equipment</option>
+            <option value="4">Yard Equipment</option>
+            <option value="5">Kitchen Appliance</option>
+            <option value="6">Exercise Equipment</option>
+            <option value="7">Instrument</option>
+            <option value="8">Computer Equipment</option>             
+          </select>
         </div>
         <div class="form-group">
           <label for="comment-add-asset">Comment: </label>

@@ -19,13 +19,13 @@ router.get('/:id', withAuthApi, async (req, res) => {
 });
 
 router.post('/', withAuthApi, async (req, res) => {
-    try {
+   try {
         const assetData = await Asset.create({...req.body, owner_id: req.session.user_id});
 
         res.status(200).json(assetData);
 
     } catch (err) {
-        res.status(400).json(err);
+       res.status(400).json(err);
     }
 });
 
@@ -48,13 +48,14 @@ router.put('/:id', withAuthApi, async (req, res) => {
 });
 
 router.delete('/:id', withAuthApi, async (req, res) => {
-    try {
+    console.log(req.params.id)
+   try {
         const assetData = await Asset.destroy({
             where: {
                 id: req.params.id
             }
         });
-
+``
         if (!assetData) {
             res.status(404).json({ message: 'No asset found with this id!' });
             return;

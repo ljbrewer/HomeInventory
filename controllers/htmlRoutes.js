@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     if (req.session.logged_in) {
       const userData = await User.findByPk(req.session.user_id, {
         attributes: { exclude: ['password'] },
-        include: [{ model: Home, as: 'homes'}, { model: Asset, as: 'assets' }],
+        include: [{ model: Home, as: 'homes'}, { model: Asset, as: 'assets', include: [{ model: Location, as: 'location' }, { model: Category, as: 'category' }, { model: State, as: 'status' }] }],
       });
 
       const user = userData.get({ plain: true });
@@ -34,7 +34,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Home, as: 'homes'}, { model: Asset, as: 'assets' }],
+      include: [{ model: Home, as: 'homes'}, { model: Asset, as: 'assets', include: [{ model: Location, as: 'location' }, { model: Category, as: 'category' }, { model: State, as: 'status' }] }],
     });
 
     const user = userData.get({ plain: true });
@@ -64,7 +64,7 @@ router.get('/myhomes', withAuth, async (req, res) => {
 
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Home, as: 'homes'}, { model: Asset, as: 'assets' }],
+      include: [{ model: Home, as: 'homes'}, { model: Asset, as: 'assets', include: [{ model: Location, as: 'location' }, { model: Category, as: 'category' }, { model: State, as: 'status' }] }],
     });
 
     const user = userData.get({ plain: true });
@@ -86,7 +86,7 @@ router.get('/myhomes/:id/', withAuth, async (req, res) => {
 
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Home, as: 'homes'}, { model: Asset, as: 'assets' }],
+      include: [{ model: Home, as: 'homes'}, { model: Asset, as: 'assets', include: [{ model: Location, as: 'location' }, { model: Category, as: 'category' }, { model: State, as: 'status' }] }],
     });
 
     const user = userData.get({ plain: true });
@@ -109,7 +109,7 @@ router.get('/assets', withAuth, async (req, res) => {
     console.log(req.body, "asset")
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Home, as: 'homes'}, { model: Asset, as: 'assets' }],
+      include: [{ model: Home, as: 'homes'}, { model: Asset, as: 'assets', include: [{ model: Location, as: 'location' }, { model: Category, as: 'category' }, { model: State, as: 'status' }] }],
     });
 
     const user = userData.get({ plain: true });

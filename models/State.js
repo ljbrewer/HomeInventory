@@ -6,10 +6,14 @@ class State extends Model { };
 State.init(
     {
         id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+        },
+        stateType: {
             type: DataTypes.STRING,
-            // allowNull: false,
-            // primaryKey: true,
-            // autoIncrement: true,
+            
         },
     },
     {

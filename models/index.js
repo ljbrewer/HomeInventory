@@ -16,13 +16,13 @@ Home.belongsTo(User, {
     foreignKey: 'owner_id'
 });
 
-Home.hasMany(Asset, {
-    foreignKey: 'home_id',
+User.hasMany(Asset, {
+    foreignKey: 'owner_id',
     onDelete: 'CASCADE'
 });
 
-Asset.belongsTo(Home, {
-    foreignKey: 'home_id'
+Asset.belongsTo(User, {
+    foreignKey: 'owner_id'
 });
 
 Location.hasMany(Asset, {

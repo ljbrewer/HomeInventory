@@ -10,7 +10,7 @@ const addHomeFormHandler = async (event) => {
   const country = document.querySelector('#country-add-home').value.trim();
   const postalcode = document.querySelector('#postalcode-add-home').value.trim();
   const policyNumber = document.querySelector('#policyNumber-add-home').value.trim();
-  
+
   if (title && purchasedOn && address1 && city && state && country && postalcode) {
     const response = await fetch('/api/homes', {
       method: 'POST',
@@ -21,7 +21,9 @@ const addHomeFormHandler = async (event) => {
     if (response.ok) {
 
       document.location.replace('/myHomes');
+
     } else {
+
       alert(response.statusText);
     }
   } else {
@@ -29,7 +31,28 @@ const addHomeFormHandler = async (event) => {
   }
 };
 
+const deleteHome = async (event) => {
+  event.preventDefault();
+  if (event.target.hasAttribute('home-id')) {
+    const id = event.target.getAttribute('home-id');
+
+    const response = await fetch(`/api/homes/${id}`, {
+      method: 'DELETE',
+    });
+
+    if (response.ok) {
+      document.location.replace('/myhomes');
+    } else {
+      alert('Failed to delete home. Please try again.');
+    }
+  }
+}
+
 
 document
   .querySelector('.add-home-form')
   .addEventListener('submit', addHomeFormHandler);
+
+document
+  .querySelector('.deleteBtn')
+  .addEventListener('click', deleteHome);

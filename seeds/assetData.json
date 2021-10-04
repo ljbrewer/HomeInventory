@@ -10,7 +10,7 @@
     "serialno":"",
     "category_id": 1,
     "location_id":7,
-    "home_id": 1
+    "owner_id": 1
   },
   {
     "item": "Chairs",
@@ -23,7 +23,7 @@
     "serialno":"",
     "category_id": 1,
     "location_id":7,
-    "home_id": 1
+    "owner_id": 1
    
   },
   {
@@ -37,7 +37,7 @@
     "serialno":"954202",
     "category_id": 1,
     "location_id":7,
-    "home_id": 1
+    "owner_id": 1
   },
   {
     "item": "Recliner",
@@ -50,7 +50,7 @@
     "serialno":"9574wst",
     "category_id": 1,
     "location_id":7,
-    "home_id": 1
+    "owner_id": 1
   },
   {
     "item": "Recliner Sofa",
@@ -63,7 +63,7 @@
     "serialno":"",
     "category_id": 1,
     "location_id":7,
-    "home_id":2
+    "owner_id":2
   },
   {
     "item": "Recliner",
@@ -76,7 +76,7 @@
     "serialno":"",
     "category_id": 1,
     "location_id":7,
-    "home_id": 3
+    "owner_id": 3
   },
   {
     "item": "Recliner",
@@ -89,7 +89,7 @@
     "serialno":"ikol98563",
     "category_id": 1,
     "location_id":7,
-    "home_id": 4
+    "owner_id": 2
   },
   {
     "item": "Recliner",
@@ -102,7 +102,7 @@
     "serialno":"95624ytr",
     "category_id": 1,
     "location_id":7,
-    "home_id": 2
+    "owner_id": 2
   },
   {
     "item": "Recliner Sofa",
@@ -115,7 +115,7 @@
     "serialno":"Recliner Brown",
     "category_id": 1,
     "location_id":7,
-    "home_id": 3
+    "owner_id": 3
   },
   {
     "item": "King Bed",
@@ -128,7 +128,7 @@
     "serialno":"",
     "category_id": 1,
     "location_id":7,
-    "home_id": 4
+    "owner_id": 3
   },
   {
     "item": "Twin Bed",
@@ -141,7 +141,7 @@
     "serialno":"",
     "category_id": 1,
     "location_id":7,
-    "home_id": 4
+    "owner_id": 3
   }
 
 ]

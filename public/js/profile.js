@@ -1,13 +1,17 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#user-name').value.trim();
+  const first_name = document.querySelector('#userFirstName-update').value.trim();
+  const last_name = document.querySelector('#userLastName-update').value.trim();
   const email = document.querySelector('#user-email').value.trim();
+  const primaryPhone = document.querySelector('#user-PrimaryPhone').value.trim();
+  const cellPhone = document.querySelector('#user-CellPhone').value.trim();
+  const workPhone = document.querySelector('#user-WorkPhone').value.trim();
 
-  if (name && email) {
-    const response = await fetch(`/api/projects`, {
-      method: 'POST',
-      body: JSON.stringify({ name, email }),
+  if (first_name || last_name || email || primaryPhone || cellPhone || workPhone) {
+    const response = await fetch(`/api/userRoutes`, {
+      method: 'PUT',
+      body: JSON.stringify({ first_name, last_name, email, primaryPhone, cellPhone, workPhone }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -16,7 +20,7 @@ const newFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to create user');
+      alert('Failed to update user information. Please try again.');
     }
   }
 };
@@ -37,9 +41,9 @@ const delButtonHandler = async (event) => {
   }
 };
 
-// document
-//   .querySelector('.new-user-form')
-//   .addEventListener('submit', newFormHandler);
+document
+  .querySelector('.update-user-form')
+  .addEventListener('submit', newFormHandler);
 
 // document
 //   .querySelector('.user-list')

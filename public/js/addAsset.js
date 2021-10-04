@@ -51,6 +51,7 @@ const deleteAsset = async (event) => {
   }
 }
 
+
 document
   .querySelector('.add-asset-form')
   .addEventListener('submit', addAssetFormHandler);

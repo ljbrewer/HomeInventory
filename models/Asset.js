@@ -59,12 +59,13 @@ Asset.init(
             },
 
         },
-        home_id: {
+        owner_id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             references: {
-              model: 'home',
-              key: 'id',
-            },
+                model: 'user',
+                key: 'id',
+              },
         }
     },
     {

@@ -27,7 +27,7 @@ const addHomeFormHandler = async (event) => {
       alert(response.statusText);
     }
   } else {
-    // xx fields are required
+    alert("Title , Purchased On Date , Address, City, State, Country, Postalcode")
   }
 };
 

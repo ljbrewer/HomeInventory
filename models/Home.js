@@ -21,7 +21,7 @@ Home.init(
         address1: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true,
+            
         },
         address2: {
             type: DataTypes.STRING,

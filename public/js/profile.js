@@ -9,7 +9,7 @@ const newFormHandler = async (event) => {
   const workPhone = document.querySelector('#user-WorkPhone').value.trim();
 
   if (first_name || last_name || email || primaryPhone || cellPhone || workPhone) {
-    const response = await fetch(`/api/userRoutes`, {
+    const response = await fetch(`/api/users`, {
       method: 'PUT',
       body: JSON.stringify({ first_name, last_name, email, primaryPhone, cellPhone, workPhone }),
       headers: {

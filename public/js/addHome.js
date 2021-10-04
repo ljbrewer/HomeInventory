@@ -33,8 +33,8 @@ const addHomeFormHandler = async (event) => {
 
 const deleteHome = async (event) => {
   event.preventDefault();
-  if (event.target.hasAttribute('home-id')) {
-    const id = event.target.getAttribute('home-id');
+  if (event.target.hasAttribute('data-id')) {
+    const id = event.target.getAttribute('data-id');
 
     const response = await fetch(`/api/homes/${id}`, {
       method: 'DELETE',
@@ -53,6 +53,11 @@ document
   .querySelector('.add-home-form')
   .addEventListener('submit', addHomeFormHandler);
 
-document
-  .querySelector('.deleteBtn')
-  .addEventListener('click', deleteHome);
+var deleteBtn=document
+  .querySelectorAll('.deleteBtn')
+
+  for (let i = 0; i < deleteBtn.length; i++) {
+    deleteBtn[i].addEventListener('click', deleteHome);
+    
+  }
+  

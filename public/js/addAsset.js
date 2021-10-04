@@ -4,19 +4,19 @@ const addAssetFormHandler = async (event) => {
   const item = document.querySelector('#item-add-asset').value.trim();
   const description = document.querySelector('#description-add-asset').value.trim();
   const purchasedOn = document.querySelector('#purchasedOn-add-asset').value.trim();
-  const location = document.querySelector('#Location-add-asset').value.trim();
+  const location_id = document.querySelector('#Location-add-asset').value.trim();
   const state_id = document.querySelector('#state-add-asset').value.trim();
   const price = document.querySelector('#price-add-asset').value.trim();
   const currentValue = document.querySelector('#currentvalue-add-asset').value.trim();
   const model = document.querySelector('#model-add-asset').value.trim();
   const serialno = document.querySelector('#serialno-add-asset').value.trim();
-  const category = document.querySelector('#category-add-asset').value.trim();
+  const category_id = document.querySelector('#category-add-asset').value.trim();
   const comments = document.querySelector('#comment-add-asset').value.trim();
 
   if (item && description) {
     const response = await fetch('/api/asset', {
       method: 'POST',
-      body: JSON.stringify({ item, purchasedOn, description, state_id, price, currentValue, model, serialno, comments, location, category }),
+      body: JSON.stringify({ item, purchasedOn, description, state_id, price, currentValue, model, serialno, comments, location_id, category_id }),
       headers: { 'Content-Type': 'application/json' },
     });
 

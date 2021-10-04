@@ -1,9 +1,9 @@
 const User = require("./User");
 const Home = require("./Home");
 const Asset = require("./Asset");
-const Location = require("./Location");
-const Category = require("./Category");
-const State = require("./State");
+// const Location = require("./Location");
+// const Category = require("./Category");
+// const State = require("./State");
 const { response } = require("express");
 
 
@@ -25,32 +25,32 @@ Asset.belongsTo(User, {
     foreignKey: 'owner_id'
 });
 
-Location.hasMany(Asset, {
-    foreignKey: 'location_id',
-    onDelete: 'Set Null'
-});
+// Location.hasMany(Asset, {
+//     foreignKey: 'location_id',
+//     onDelete: 'Set Null'
+// });
 
-Asset.belongsTo(Location, {
-    foreignKey: 'location_id'
-});
+// Asset.belongsTo(Location, {
+//     foreignKey: 'location_id'
+// });
 
-Category.hasMany(Asset, {
-    foreignKey: 'category_id',
-    onDelete: 'Set Null'
-});
+// Category.hasMany(Asset, {
+//     foreignKey: 'category_id',
+//     onDelete: 'Set Null'
+// });
 
-Asset.belongsTo(Category, {
-    foreignKey: 'category_id'
-});
+// Asset.belongsTo(Category, {
+//     foreignKey: 'category_id'
+// });
 
-State.hasMany(Asset, {
-    foreignKey: 'state_id',
-    onDelete: 'Set Null'
-});
+// State.hasMany(Asset, {
+//     foreignKey: 'state_id',
+//     onDelete: 'Set Null'
+// });
 
-Asset.belongsTo(State, {
-    foreignKey: 'state_id',
-    as: 'status'
-});
+// Asset.belongsTo(State, {
+//     foreignKey: 'state_id',
+//     as: 'status'
+// });
 
-module.exports = { User, Home, Asset, Location, Category, State };
+module.exports = { User, Home, Asset };

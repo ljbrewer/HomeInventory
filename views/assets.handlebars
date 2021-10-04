@@ -22,14 +22,14 @@
       {{#if serialno}}
       <p>Serial #: {{serialno}}</p>
       {{/if}}
-      {{#if location.nameoflocation}}
-      <p>Location: {{location.nameoflocation}}</p>
+      {{#if location_id}}
+      <p>Location: {{location_id}}</p>
       {{/if}}
-      {{#if status.stateType}}
-      <p>Condition: {{status.stateType}}</p>
+      {{#if state_id}}
+      <p>Condition: {{state_id}}</p>
       {{/if}}
-      {{#if category.description}}
-      <p>Category: {{category.description}}</p>
+      {{#if category_id}}
+      <p>Category: {{category_id}}</p>
       {{/if}}
       <button data-id={{id}} class="deleteBtn">DELETE</button>
     </div>
@@ -56,39 +56,40 @@
         <div class="form-group">
           <label for="location-add-asset">Location:</label>
           <select class="form-input"  id="location-add-asset">
-            <option value="1">Living Room</option>
-            <option value="2">Master Bedroom</option>
-            <option value="3">Nursury</option>
-            <option value="4">Bedroom 1</option>
-            <option value="5">Bedroom 2</option>
-            <option value="6">Bedroom 3</option>
-            <option value="7">Guest Bedroom</option>
-            <option value="8">Dining Room</option> 
-            <option value="9">Kitchen</option>
-            <option value="10">Pantry</option>
-            <option value="11">Family Room</option>
-            <option value="12">Formal Dining Room</option>
-            <option value="13">Game Room</option>            
-            <option value="14">Office</option>
-            <option value="15">Garage</option>
-            <option value="16">Bathroom</option>
-            <option value="17">Master Bath</option>
-            <option value="18">Half Bath</option>
-            <option value="19">Mud Room</option>
-            <option value="20">Porch</option>
-            <option value="21">Breakfast Nook</option>
+            <option value="Living Room">Living Room</option>
+            <option value="Master Bedroom">Master Bedroom</option>
+            <option value="Nursury">Nursury</option>
+            <option value="Bedroom 1">Bedroom 1</option>
+            <option value="Bedroom 2">Bedroom 2</option>
+            <option value="Bedroom 3">Bedroom 3</option>
+            <option value="Guest Bedroom">Guest Bedroom</option>
+            <option value="Dining Room">Dining Room</option> 
+            <option value="Kitchen">Kitchen</option>
+            <option value="Pantry">Pantry</option>
+            <option value="Family Room">Family Room</option>
+            <option value="Formal Dining Room">Formal Dining Room</option>
+            <option value="Game Room">Game Room</option>            
+            <option value="Office">Office</option>
+            <option value="Garage">Garage</option>
+            <option value="Bathroom">Bathroom</option>
+            <option value="Master Bath">Master Bath</option>
+            <option value="Half Bath">Half Bath</option>
+            <option value="Mud Room">Mud Room</option>
+            <option value="Porch">Porch</option>
+            <option value="Breakfast Nook">Breakfast Nook</option>
+            <option value="In Storage">In Storage</option>
           </select>
         </div>
         <div class="form-group">
           <label for="state-add-asset">Condition of item:</label>
           <select class="form-input"  id="state-add-asset">
-            <option value="1">New</option>
-            <option value="2">Fair</option>
-            <option value="3">Like New</option>
-            <option value="4">Good </option>
-            <option value="5">Very Good</option>
-            <option value="6">Needs Work</option>
-            <option value="7">Poor</option>            
+            <option value="New">New</option>
+            <option value="Fair">Fair</option>
+            <option value="Like New">Like New</option>
+            <option value="Good">Good</option>
+            <option value="Very Good">Very Good</option>
+            <option value="Needs Work">Needs Work</option>
+            <option value="Poor">Poor</option>            
           </select>
         </div>
         <div class="form-group">
@@ -110,14 +111,14 @@
         <div class="form-group">
           <label for="Category-add-asset">Category: </label>
           <select class="form-input"  id="category-add-asset">
-            <option value="1">Furniture</option>
-            <option value="2">Media Equipment</option>
-            <option value="3">Sports Equipment</option>
-            <option value="4">Yard Equipment</option>
-            <option value="5">Kitchen Appliance</option>
-            <option value="6">Exercise Equipment</option>
-            <option value="7">Instrument</option>
-            <option value="8">Computer Equipment</option>             
+            <option value="Furniture">Furniture</option>
+            <option value="Media Equipment">Media Equipment</option>
+            <option value="Sports Equipment">Sports Equipment</option>
+            <option value="Yard Equipment">Yard Equipment</option>
+            <option value="Kitchen Appliance">Kitchen Appliance</option>
+            <option value="Exercise Equipment">Exercise Equipment</option>
+            <option value="Instrument">Instrument</option>
+            <option value="Computer Equipment">Computer Equipment</option>             
           </select>
         </div>
         <div class="form-group">

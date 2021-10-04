@@ -23,11 +23,11 @@ Asset.init(
             allowNull: false,
         },
         state_id: {
-            type: DataTypes.STRING,
-            // references: {
-            //   model: 'state',
-            //   key: 'id',
-            // },
+            type: DataTypes.INTEGER,
+            references: {
+              model: 'state',
+              key: 'id',
+            },
         },
         price: {
             type: DataTypes.DECIMAL,
@@ -45,18 +45,18 @@ Asset.init(
             type: DataTypes.TEXT,
         },
         category_id: {
-            type: DataTypes.STRING,
-            // references: {
-            //   model: 'category',
-            //   key: 'id',
-            // },
+            type: DataTypes.INTEGER,
+            references: {
+              model: 'category',
+              key: 'id',
+            },
         },
         location_id: {
-            type: DataTypes.STRING,
-            // references: {
-            //   model: 'location',
-            //   key: 'id',
-            // },
+            type: DataTypes.INTEGER,
+            references: {
+              model: 'location',
+              key: 'id',
+            },
 
         },
         owner_id: {

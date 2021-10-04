@@ -1,9 +1,9 @@
-[{"category_id": "Furniture" },
- {"category_id":  "Media Equipment" },
- {"category_id": "Sports Equipment" },
- {"category_id":  "Yard Equipment" },
- {"category_id":  "Kitchen Appliance" },
- {"category_id": "Exercise Equipment" },
- {"category_id": "Instrument" },
- {"category_id": "Computer Equipment" }
+[{"description": "Furniture" },
+ {"description":  "Media Equipment" },
+ {"description": "Sports Equipment" },
+ {"description":  "Yard Equipment" },
+ {"description":  "Kitchen Appliance" },
+ {"description": "Exercise Equipment" },
+ {"description": "Instrument" },
+ {"description": "Computer Equipment" }
 ]

@@ -6,13 +6,17 @@ class Location extends Model { };
 Location.init(
     {
         id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+        },
+        nameoflocation: {
             type: DataTypes.STRING,
-            // allowNull: false,
-            // primaryKey: true,
-            // autoIncrement: true,
+            
         },
     },
-        {
+    {
         sequelize,
         timestamps: false,
         freezeTableName: true,

@@ -13,7 +13,7 @@
       <p>Insurance Policy: {{policyNumber}}</p>
       {{/if}}
       <p>Purchased on: {{format_date purchasedOn}}</p>
-      <button home-id={{id}} class="deleteBtn">DELETE</button>
+      <button data-id={{id}} class="deleteBtn">DELETE</button>
     </div>
     {{/each}}
   </div>
@@ -68,6 +68,5 @@
       </form>
     </div>
   </div>
-</div>
 </div>
 <script src="/js/addHome.js"></script>

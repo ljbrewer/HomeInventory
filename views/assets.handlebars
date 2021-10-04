@@ -1,22 +1,4 @@
 <div class="row">
-
-  <h1>Assets</h1>
-  <div class="col-md-6">
-    {{#each assets as |asset| }}
-    <div class="section">
-      <h4>
-        <a href="/assets/{{asset.id}}">{{item}}</a>
-      </h4>
-      <p>Description: {{description}}</p>
-      <p>Date Purchased: {{purchasedOn}}</p>
-      <p>Price Value: {{price}}</p>
-      <p>Current Value: {{currentValue}}</p>
-      <p>Model #: {{model}}</p>
-      <p>Serial #: {{serialno}}</p>
-      <p>Location: {{location.nameoflocation}}</p>
-      <p>Condition: {{status.stateType}}</p>
-      <p>Category: {{category.description}}</p>
-
   <h1>My Assets</h1>
   <div class="col-md-6">
     {{#each assets as |asset| }}
@@ -49,7 +31,7 @@
       {{#if category.description}}
       <p>Category: {{category.description}}</p>
       {{/if}}
-      <button asset-id={{id}} class="deleteBtn">DELETE</button>
+      <button data-id={{id}} class="deleteBtn">DELETE</button>
     </div>
     {{/each}}
   </div>

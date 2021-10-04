@@ -10,8 +10,12 @@
     <p>Last Name: {{user.last_name}}</p>
     <p>Email: {{user.email}}</p>
     <p>Primary Phone: {{user.primaryPhone}}</p>
+    {{#if user.cellPhone}}
     <p>Cell Phone: {{user.cellPhone}}</p>
+    {{/if}}
+    {{#if user.workPhone}}
     <p>Work Phone: {{user.workPhone}}</p>
+    {{/if}}
     {{/if}}
   </div>
   </div>

@@ -32,11 +32,11 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/', async (req, res) => {
     try {
         const userData = await User.update({
             where: {
-                id: req.params.id
+                id: req.session.user_id,
             }
         });
 

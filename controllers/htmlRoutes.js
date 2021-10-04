@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     if (req.session.logged_in) {
       const userData = await User.findByPk(req.session.user_id, {
         attributes: { exclude: ['password'] },
-        include: [{ model: Home, as: 'homes', include: [{ model: Asset, as: 'assets', include: [{ model: Location, as: 'location' }, { model: Category, as: 'category' }, { model: State, as: 'status' }] }] }],
+        include: [{ model: Home, as: 'homes'}, { model: Asset, as: 'assets', include: [{ model: Location, as: 'location' }, { model: Category, as: 'category' }, { model: State, as: 'status' }] }],
       });
 
       const user = userData.get({ plain: true });
@@ -34,7 +34,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Home, as: 'homes', include: [{ model: Asset, as: 'assets', include: [{ model: Location, as: 'location' }, { model: Category, as: 'category' }, { model: State, as: 'status' }] }] }],
+      include: [{ model: Home, as: 'homes'}, { model: Asset, as: 'assets', include: [{ model: Location, as: 'location' }, { model: Category, as: 'category' }, { model: State, as: 'status' }] }],
     });
 
     const user = userData.get({ plain: true });
@@ -52,7 +52,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/homepage');
+    res.redirect('/');
     return;
   }
 
@@ -64,7 +64,7 @@ router.get('/myhomes', withAuth, async (req, res) => {
 
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Home, as: 'homes', include: [{ model: Asset, as: 'assets', include: [{ model: Location, as: 'location' }, { model: Category, as: 'category' }, { model: State, as: 'status' }] }] }],
+      include: [{ model: Home, as: 'homes'}, { model: Asset, as: 'assets', include: [{ model: Location, as: 'location' }, { model: Category, as: 'category' }, { model: State, as: 'status' }] }],
     });
 
     const user = userData.get({ plain: true });
@@ -86,7 +86,7 @@ router.get('/myhomes/:id/', withAuth, async (req, res) => {
 
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Home, as: 'homes', include: [{ model: Asset, as: 'assets', include: [{ model: Location, as: 'location' }, { model: Category, as: 'category' }, { model: State, as: 'status' }] }] }],
+      include: [{ model: Home, as: 'homes'}, { model: Asset, as: 'assets', include: [{ model: Location, as: 'location' }, { model: Category, as: 'category' }, { model: State, as: 'status' }] }],
     });
 
     const user = userData.get({ plain: true });
@@ -109,30 +109,35 @@ router.get('/assets', withAuth, async (req, res) => {
     console.log(req.body, "asset")
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Home, as: 'homes', include: [{ model: Asset, as: 'assets', include: [{ model: Location, as: 'location'}, { model: Category, as: 'category' }, { model: State, as: 'status'}] }] }],
+      include: [{ model: Home, as: 'homes'}, { model: Asset, as: 'assets', include: [{ model: Location, as: 'location' }, { model: Category, as: 'category' }, { model: State, as: 'status' }] }],
     });
 
     const user = userData.get({ plain: true });
 
-    const assets = user.homes.reduce((currentAssets, home) => {
-      const nextCurrentAssets = [
-        ...currentAssets,
-        ...home.assets.map(asset => {
-          return { ...asset, home: home.title }
-        })
-      ];
-      return nextCurrentAssets;
-    }, []);
+    // const userAssets = user.reduce((currentAssets, home) => {
+    //   const nextCurrentAssets = [
+    //     ...currentAssets,
+    //     ...assets.map(asset => {
+    //       return { ...asset, home: home.title }
+    //     })
+    //   ];
+    //   return nextCurrentAssets;
+    // }, []);
 
     res.render('assets', {
       user,
-      assets,
-      homes:user.homes,
+      assets: user.assets,
       logged_in: req.session.logged_in,
-     });
+    });
+
+    // res.render('assets', {
+    //   assets,
+    //   logged_in: req.session.logged_in,
+    //   user
+    // });
 
   } catch (err) {
-    console.log(err)
+
     res.status(500).json(err);
   };
 

@@ -1,133 +1,135 @@
-<div class="row">
-  <h1>My Assets</h1>
-  <div class="col-md-6">
-    {{#each assets as |asset| }}
-    <div class="section">
-      <h4>{{item}}</h4>
-      <p>Description: {{description}}</p>
-      <p>Date Purchased: {{format_date purchasedOn}}</p>
-      {{#if price}}
-      <p>Price<span for="img" aria-label="money">💲</span>
-        <span class="dollar-amount">{{format_amount price}}</span>
-      </p>
-      {{/if}}
-      {{#if currentValue}}
-      <p>Current Value: <span for="img" aria-label="money">💲</span>
-        <span class="dollar-amount">{{format_amount currentValue}}</span>
-      </p>
-      {{/if}}
-      {{#if model}}
-      <p>Model #: {{model}}</p>
-      {{/if}}
-      {{#if serialno}}
-      <p>Serial #: {{serialno}}</p>
-      {{/if}}
-      {{#if location.nameoflocation}}
-      <p>Location: {{location.nameoflocation}}</p>
-      {{/if}}
-      {{#if status.stateType}}
-      <p>Condition: {{status.stateType}}</p>
-      {{/if}}
-      {{#if category.description}}
-      <p>Category: {{category.description}}</p>
-      {{/if}}
-      <button data-id={{id}} class="deleteBtn">DELETE</button>
+<div class="pageContainer">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>My Assets</h1>
+      {{#each assets as |asset| }}
+      <div class="section">
+        <h4>{{item}}</h4>
+        <p>Description: {{description}}</p>
+        <p>Date Purchased: {{format_date purchasedOn}}</p>
+        {{#if price}}
+        <p>Price<span for="img" aria-label="money">💲</span>
+          <span class="dollar-amount">{{format_amount price}}</span>
+        </p>
+        {{/if}}
+        {{#if currentValue}}
+        <p>Current Value: <span for="img" aria-label="money">💲</span>
+          <span class="dollar-amount">{{format_amount currentValue}}</span>
+        </p>
+        {{/if}}
+        {{#if model}}
+        <p>Model #: {{model}}</p>
+        {{/if}}
+        {{#if serialno}}
+        <p>Serial #: {{serialno}}</p>
+        {{/if}}
+        {{#if location.nameoflocation}}
+        <p>Location: {{location.nameoflocation}}</p>
+        {{/if}}
+        {{#if status.stateType}}
+        <p>Condition: {{status.stateType}}</p>
+        {{/if}}
+        {{#if category.description}}
+        <p>Category: {{category.description}}</p>
+        {{/if}}
+        <button data-id={{id}} class="deleteBtn">DELETE</button>
+      </div>
+      {{/each}}
     </div>
-    {{/each}}
-  </div>
 
-  <div class="col-md-6">
+    <div class="col-md-6">
 
-    <div class="section">
-      <h2>Add An Asset</h2>
-      <form class="form add-asset-form">
-        <div class="form-group">
-          <label for="item-add-asset">Item:</label>
-          <input class="form-input" type="text" id="item-add-asset" />
-        </div>
-        <div class="form-group">
-          <label for="description-add-asset">Description:</label>
-          <input class="form-input" type="text" id="description-add-asset" />
-        </div>
-        <div class="form-group">
-          <label for="purchasedOn-add-asset">Purchase Date:</label>
-          <input class="form-input" type="date" id="purchasedOn-add-asset" />
-        </div>
-        <div class="form-group">
-          <label for="location-add-asset">Location:</label>
-          <select class="form-input"  id="location-add-asset">
-            <option value="1">Living Room</option>
-            <option value="2">Master Bedroom</option>
-            <option value="3">Nursury</option>
-            <option value="4">Bedroom 1</option>
-            <option value="5">Bedroom 2</option>
-            <option value="6">Bedroom 3</option>
-            <option value="7">Guest Bedroom</option>
-            <option value="8">Dining Room</option> 
-            <option value="9">Kitchen</option>
-            <option value="10">Pantry</option>
-            <option value="11">Family Room</option>
-            <option value="12">Formal Dining Room</option>
-            <option value="13">Game Room</option>            
-            <option value="14">Office</option>
-            <option value="15">Garage</option>
-            <option value="16">Bathroom</option>
-            <option value="17">Master Bath</option>
-            <option value="18">Half Bath</option>
-            <option value="19">Mud Room</option>
-            <option value="20">Porch</option>
-            <option value="21">Breakfast Nook</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="state-add-asset">Condition of item:</label>
-          <select class="form-input"  id="state-add-asset">
-            <option value="1">New</option>
-            <option value="2">Fair</option>
-            <option value="3">Like New</option>
-            <option value="4">Good </option>
-            <option value="5">Very Good</option>
-            <option value="6">Needs Work</option>
-            <option value="7">Poor</option>            
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="price-add-asset">Price:</label>
-          <input class="form-input" type="text" id="price-add-asset" />
-        </div>
-        <div class="form-group">
-          <label for="currentvalue-add-asset">Current Value: </label>
-          <input class="form-input" type="text" id="currentvalue-add-asset" />
-        </div>
-        <div class="form-group">
-          <label for="model-add-asset">Model #:</label>
-          <input class="form-input" type="text" id="model-add-asset" />
-        </div>
-        <div class="form-group">
-          <label for="serialno-add-asset">Serial #:</label>
-          <input class="form-input" type="text" id="serialno-add-asset" />
-        </div>
-        <div class="form-group">
-          <label for="Category-add-asset">Category: </label>
-          <select class="form-input"  id="category-add-asset">
-            <option value="1">Furniture</option>
-            <option value="2">Media Equipment</option>
-            <option value="3">Sports Equipment</option>
-            <option value="4">Yard Equipment</option>
-            <option value="5">Kitchen Appliance</option>
-            <option value="6">Exercise Equipment</option>
-            <option value="7">Instrument</option>
-            <option value="8">Computer Equipment</option>             
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="comment-add-asset">Comment: </label>
-          <input class="form-input" type="text" id="comment-add-asset" />
-        </div>
-        <div class="form-group">
-          <button class="btn btn-primary" type="submit">Add Asset</button>
-        </div>
-      </form>
+      <div class="section">
+        <h2>Add An Asset</h2>
+        <form class="form add-asset-form">
+          <div class="form-group">
+            <label for="item-add-asset">Item:</label>
+            <input class="form-input" type="text" id="item-add-asset" />
+          </div>
+          <div class="form-group">
+            <label for="description-add-asset">Description:</label>
+            <input class="form-input" type="text" id="description-add-asset" />
+          </div>
+          <div class="form-group">
+            <label for="purchasedOn-add-asset">Purchase Date:</label>
+            <input class="form-input" type="date" id="purchasedOn-add-asset" />
+          </div>
+          <div class="form-group">
+            <label for="location-add-asset">Location:</label>
+            <select class="form-input" id="location-add-asset">
+              <option value="1">Living Room</option>
+              <option value="2">Master Bedroom</option>
+              <option value="3">Nursury</option>
+              <option value="4">Bedroom 1</option>
+              <option value="5">Bedroom 2</option>
+              <option value="6">Bedroom 3</option>
+              <option value="7">Guest Bedroom</option>
+              <option value="8">Dining Room</option>
+              <option value="9">Kitchen</option>
+              <option value="10">Pantry</option>
+              <option value="11">Family Room</option>
+              <option value="12">Formal Dining Room</option>
+              <option value="13">Game Room</option>
+              <option value="14">Office</option>
+              <option value="15">Garage</option>
+              <option value="16">Bathroom</option>
+              <option value="17">Master Bath</option>
+              <option value="18">Half Bath</option>
+              <option value="19">Mud Room</option>
+              <option value="20">Porch</option>
+              <option value="21">Breakfast Nook</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="state-add-asset">Condition of item:</label>
+            <select class="form-input" id="state-add-asset">
+              <option value="1">New</option>
+              <option value="2">Fair</option>
+              <option value="3">Like New</option>
+              <option value="4">Good </option>
+              <option value="5">Very Good</option>
+              <option value="6">Needs Work</option>
+              <option value="7">Poor</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="price-add-asset">Price:</label>
+            <input class="form-input" type="text" id="price-add-asset" />
+          </div>
+          <div class="form-group">
+            <label for="currentvalue-add-asset">Current Value: </label>
+            <input class="form-input" type="text" id="currentvalue-add-asset" />
+          </div>
+          <div class="form-group">
+            <label for="model-add-asset">Model #:</label>
+            <input class="form-input" type="text" id="model-add-asset" />
+          </div>
+          <div class="form-group">
+            <label for="serialno-add-asset">Serial #:</label>
+            <input class="form-input" type="text" id="serialno-add-asset" />
+          </div>
+          <div class="form-group">
+            <label for="Category-add-asset">Category: </label>
+            <select class="form-input" id="category-add-asset">
+              <option value="1">Furniture</option>
+              <option value="2">Media Equipment</option>
+              <option value="3">Sports Equipment</option>
+              <option value="4">Yard Equipment</option>
+              <option value="5">Kitchen Appliance</option>
+              <option value="6">Exercise Equipment</option>
+              <option value="7">Instrument</option>
+              <option value="8">Computer Equipment</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="comment-add-asset">Comment: </label>
+            <input class="form-input" type="text" id="comment-add-asset" />
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary" type="submit">Add Asset</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
   <script src="/js/addAsset.js"></script>

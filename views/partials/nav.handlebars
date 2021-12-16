@@ -1,21 +1,17 @@
 
 
 <nav>
-    <ul class="navbar">
-
         {{#if logged_in}}
 
         {{!-- adding info about which user is logged in --}}
-          <li><i class="fas fa-check-circle"></i> {{user.email}}</li>
-          <li><button><a href="/profile">My Profile</a></button></li>
-          <li><button><a href="/myhomes">My Homes</a></button></li>
-          <li><button><a href="/assets">Home Assets</a></button></li>
-          <li><button id="logout">Logout</button></li>
+          <a id="userEmail" href="/profile"><i class="fas fa-check-circle"></i> {{user.email}}</a>
+          <a class="navbtn" href="/profile">My Profile</a>
+          <a class="navbtn" href="/myhomes">My Homes</a>
+          <a class="navbtn" href="/assets">Home Assets</a>
+          <a class="navbtn" id="logout">Logout</a>
         {{else}}
-          <li><button><a href="/login">Login/Sign Up</a></button></li>
+          <a class="navbtn" href="/login">Login/Sign Up</a>
         {{/if}}
-
-    </ul>
 </nav>
 
 {{#if logged_in}}

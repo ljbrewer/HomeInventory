@@ -1,52 +1,88 @@
 header {
-    background-color: rgb(79, 47, 218, 0.5);
-}
-
-body {
-    background-image: url("https://github.com/ljbrewer/HomeInventory/blob/main/assets/Hero-HomeInventory.jpg?raw=true");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    min-height: 100vh;
-    width:100%;
-    position: relative;
-} 
-
-.homepage {
-    padding-top: 100px
-}
-
-.login {
-    margin-left: 40%;
-    font-size: 20px;
-    font-weight: bolder;
-    border-radius: 15px;
-    background-color: white;
-    width: 200px;
-}
-
-.intro {
-    padding-bottom: 100px;
-}
-
-.navbar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    height: 12vh;
+    color:white;
+    background-color: #8a00d4;
+    justify-content: space-around;
     align-items: center;
 }
 
-ul{
-    list-style-type: none;
+body {
+    min-height: 100vh;
+    width:100%;
+} 
+
+#container {
+    background-color: #e3e3e3;
 }
 
-.footer{
-    background-color: rgb(79, 47, 218, 0.5);
-    position: absolute;
-    left: 0px;
-    bottom: 0;
-    width: 100%;
-    padding: 10px;
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    justify-content: space-evenly;
+}
+
+.login {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    border-radius: 12px;
+    background-color: white;
+    width: 11rem;
+}
+
+.login a {
+    text-decoration: none;
     color: black;
+}
+
+.login a:hover {
+    text-decoration: underline;
+    color: #d527b7;
+}
+
+#logout:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #f782c2;
+}
+
+.intro {
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+}
+
+.navbtn {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    margin: 0 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    border-radius: 12px;
+    background-color: white;
+    width: 10rem;
+}
+
+.navbtn:hover {
+    text-decoration: underline;
+    color: #f782c2;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    background-color: #8a00d4;
+    width: 100%;
+    color: #e3e3e3;
 }
 
 .section {
@@ -57,14 +93,26 @@ ul{
 
 .home {
   text-decoration: none;
-  color: inherit;
+  color: white;
 }
 
 .home:hover {
   text-decoration: none;
-  color: inherit;
+  color: white;
 }
 
 .row {
-    margin-bottom: 6.5rem;
+    margin: 6.5rem 0!important;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px 0 rgb(69 67 96 / 10%);
+}
+
+#userEmail {
+    text-decoration: none;
+    color: white;
+}
+
+#userEmail:hover {  
+    text-decoration: underline;
+    color: #f782c2;
 }

@@ -1,61 +1,62 @@
-<div class="row">
-<h1>Welcome</h1>
-<div class="col-md-6">
-{{#if logged_in}}
-  <div class="section">
-    <h4>User Info
-        <a href="/User/{{user.id}}">{{first_name}}</a>
-    </h4>
-    <p>First Name: {{user.first_name}}</p>
-    <p>Last Name: {{user.last_name}}</p>
-    <p>Email: {{user.email}}</p>
-    <p>Primary Phone: {{user.primaryPhone}}</p>
-    {{#if user.cellPhone}}
-    <p>Cell Phone: {{user.cellPhone}}</p>
-    {{/if}}
-    {{#if user.workPhone}}
-    <p>Work Phone: {{user.workPhone}}</p>
-    {{/if}}
-    {{/if}}
-  </div>
-  </div>
-
-
-<div class="col-md-6">
-  
-<div class="section">
-    <h4>Update User Info</h4>
-  <form class="form update-user-form">
-    <div class="form-group">
-      <label for="userFirstName-update">First Name:</label>
-      <input class="form-input" type="text" id="userFirstName-update" />
-    </div>
-    <div class="form-group">
-      <label for="userLastName-update">Last Name:</label>
-      <input class="form-input" type="text" id="userLastName-update" />
-    </div>
-    <div class="form-group">
-      <label for="user-email">Email:</label>
-      <input class="form-input" type="text" id="user-email" />
-    </div>
-    <div class="form-group">
-      <label for="user-PrimaryPhone">Primary Phone:</label>
-      <input class="form-input" type="text" id="user-PrimaryPhone" />
-    </div>
-    <div class="form-group">
-      <label for="user-CellPhone">Cell Phone:</label>
-      <input class="form-input" type="text" id="user-CellPhone" />
-    </div>
-    <div class="form-group">
-      <label for="user-WorkPhone">Work Phone:</label>
-      <input class="form-input" type="text" id="user-WorkPhone" />
-    </div>
-          <div class="form-group">
-        <button class="btn btn-primary" type="submit">Update User Info</button>
+<div class="pageContainer">
+  <div class="row">
+    <div class="col-md-6">
+      {{#if logged_in}}
+      <h2>User Info
+          <a href="/User/{{user.id}}">{{first_name}}</a>
+        </h2>
+      <div class="addSection">
+        <p>First Name: {{user.first_name}}</p>
+        <p>Last Name: {{user.last_name}}</p>
+        <p>Email: {{user.email}}</p>
+        <p>Primary Phone: {{user.primaryPhone}}</p>
+        {{#if user.cellPhone}}
+        <p>Cell Phone: {{user.cellPhone}}</p>
+        {{/if}}
+        {{#if user.workPhone}}
+        <p>Work Phone: {{user.workPhone}}</p>
+        {{/if}}
+        {{/if}}
       </div>
-  </form>
+    </div>
+
+
+    <div class="col-md-6">
+
+        <h2>Update User Info</h2>
+      <div class="addSection">
+        <form class="form update-user-form">
+          <div class="form-group">
+            <label for="userFirstName-update">First Name:</label>
+            <input class="form-input" type="text" id="userFirstName-update" />
+          </div>
+          <div class="form-group">
+            <label for="userLastName-update">Last Name:</label>
+            <input class="form-input" type="text" id="userLastName-update" />
+          </div>
+          <div class="form-group">
+            <label for="user-email">Email:</label>
+            <input class="form-input" type="text" id="user-email" />
+          </div>
+          <div class="form-group">
+            <label for="user-PrimaryPhone">Primary Phone:</label>
+            <input class="form-input" type="text" id="user-PrimaryPhone" />
+          </div>
+          <div class="form-group">
+            <label for="user-CellPhone">Cell Phone:</label>
+            <input class="form-input" type="text" id="user-CellPhone" />
+          </div>
+          <div class="form-group">
+            <label for="user-WorkPhone">Work Phone:</label>
+            <input class="form-input" type="text" id="user-WorkPhone" />
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary" type="submit">Update User Info</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
-</div>
 </div>
 
 <script src="/js/profile.js"></script>

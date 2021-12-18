@@ -126,6 +126,7 @@ router.get('/assets', withAuth, async (req, res) => {
 
     res.render('assets', {
       user,
+      homes: user.homes,
       assets: user.assets,
       logged_in: req.session.logged_in,
     });

@@ -1,9 +1,15 @@
 <div class="pageContainer">
+  {{#unless homes}}
+    <h2 class="noHomes">
+      Sorry, you need to add homes before you can add any assets.
+    </h2>
+    <h3>Please visit your "My Homes" tab or click <a href="/myhomes">here</a> to add one.</h3>
+  {{else}}
   <div class="row">
     <div class="col-md-6">
       <h1>My Assets</h1>
       {{#each assets as |asset| }}
-      <div class="section">
+      <div class="addSection">
         <h4>{{item}}</h4>
         <p>Description: {{description}}</p>
         <p>Date Purchased: {{format_date purchasedOn}}</p>
@@ -131,5 +137,6 @@
         </form>
       </div>
     </div>
+    {{/unless}}
   </div>
   <script src="/js/addAsset.js"></script>

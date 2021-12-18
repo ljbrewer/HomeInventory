@@ -1,71 +1,76 @@
-<div class="row">
-  <h1>My Homes</h1>
-  <div class="col-md-6">
-    {{#each homes as |home| }}
-    <div class="section">
-      <h4>{{title}}</h4>
-      <p>{{address1}}</p>
-      {{#if address2}}
-      <p>{{address2}}</p>
+<div class="pageContainer">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>My Homes</h2>
+      {{#if homes}}
+      {{#each homes as |home| }}
+      <div class="section">
+        <h4>{{title}}</h4>
+        <p>{{address1}}</p>
+        {{#if address2}}
+        <p>{{address2}}</p>
+        {{/if}}
+        <p>{{city}}, {{state}} {{postalcode}}</p>
+        {{#if policyNumber}}
+        <p>Insurance Policy: {{policyNumber}}</p>
+        {{/if}}
+        <p>Purchased on: {{format_date purchasedOn}}</p>
+        <button data-id={{id}} class="deleteBtn">DELETE</button>
+      </div>
+      {{/each}}
+      {{else}}
+      <div class="noContentSection">
+        <h4>You have no homes! 😦🏠</h4>
+        <p>Don't worry! You can add one on this form. ➡️</p>
+      </div>
       {{/if}}
-      <p>{{city}}, {{state}} {{postalcode}}</p>
-      {{#if policyNumber}}
-      <p>Insurance Policy: {{policyNumber}}</p>
-      {{/if}}
-      <p>Purchased on: {{format_date purchasedOn}}</p>
-      <button data-id={{id}} class="deleteBtn">DELETE</button>
     </div>
-    {{/each}}
-  </div>
 
-
-
-
-  <div class="col-md-6">
-
-    <div class="section">
+    <div class="col-md-6">
       <h2>Add A Home</h2>
-      <form class="form add-home-form">
-        <div class="form-group">
-          <label for="title-add-home">Title:</label>
-          <input class="form-input" type="text" id="title-add-home" />
-        </div>
-        <div class="form-group">
-          <label for="purchasedOn-add-home">Purchase Date:</label>
-          <input class="form-input" type="date" id="purchasedOn-add-home" />
-        </div>
-        <div class="form-group">
-          <label for="address1-add-home">Address 1:</label>
-          <input class="form-input" type="text" id="address1-add-home" />
-        </div>
-        <div class="form-group">
-          <label for="address2-add-home">Address 2:</label>
-          <input class="form-input" type="text" id="address2-add-home" />
-        </div>
-        <div class="form-group">
-          <label for="city-add-home">City:</label>
-          <input class="form-input" type="text" id="city-add-home" />
-        </div>
-        <div class="form-group">
-          <label for="state-add-home">State:</label>
-          <input class="form-input" type="text" id="state-add-home" />
-        </div>
-        <div class="form-group">
-          <label for="country-add-home">Country:</label>
-          <input class="form-input" type="text" id="country-add-home" />
-        </div>
-        <div class="form-group">
-          <label for="postalcode-add-home">Postal Code:</label>
-          <input class="form-input" type="text" id="postalcode-add-home" />
-        </div>
-        <div class="form-group">
-          <label for="policyNumber-add-home">Policy #:</label>
-          <input class="form-input" type="text" id="policyNumber-add-home" />
-        </div>
-        <div class="form-group">
-          <button class="btn btn-primary" type="submit">Add Home</button>
-        </div>
-      </form>
+      <div class="section">
+        <form class="form add-home-form">
+          <div class="form-group">
+            <label for="title-add-home">Title:</label>
+            <input class="form-input" type="text" id="title-add-home" />
+          </div>
+          <div class="form-group">
+            <label for="purchasedOn-add-home">Purchase Date:</label>
+            <input class="form-input" type="date" id="purchasedOn-add-home" />
+          </div>
+          <div class="form-group">
+            <label for="address1-add-home">Address 1:</label>
+            <input class="form-input" type="text" id="address1-add-home" />
+          </div>
+          <div class="form-group">
+            <label for="address2-add-home">Address 2:</label>
+            <input class="form-input" type="text" id="address2-add-home" />
+          </div>
+          <div class="form-group">
+            <label for="city-add-home">City:</label>
+            <input class="form-input" type="text" id="city-add-home" />
+          </div>
+          <div class="form-group">
+            <label for="state-add-home">State:</label>
+            <input class="form-input" type="text" id="state-add-home" />
+          </div>
+          <div class="form-group">
+            <label for="country-add-home">Country:</label>
+            <input class="form-input" type="text" id="country-add-home" />
+          </div>
+          <div class="form-group">
+            <label for="postalcode-add-home">Postal Code:</label>
+            <input class="form-input" type="text" id="postalcode-add-home" />
+          </div>
+          <div class="form-group">
+            <label for="policyNumber-add-home">Policy #:</label>
+            <input class="form-input" type="text" id="policyNumber-add-home" />
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary" type="submit">Add Home</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>

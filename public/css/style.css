@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 header {
     height: 12vh;
     color:white;
@@ -47,9 +52,6 @@ body {
     color: #f782c2;
 }
 
-.intro {
-}
-
 nav {
     display: flex;
     justify-content: flex-end;
@@ -87,13 +89,18 @@ nav {
 
 .section {
     border-style: double;
-    padding: 10px;
-    margin: 15px;
+    padding: 0 1rem;
+}
+
+.noContentSection {
+    border-style: double;
+    padding: 1rem 1rem 0 1rem;
 }
 
 .home {
   text-decoration: none;
   color: white;
+  
 }
 
 .home:hover {
@@ -101,7 +108,7 @@ nav {
   color: white;
 }
 
-.row {
+.pageContainer {
     margin: 6.5rem 0!important;
     border-radius: 12px;
     box-shadow: 0 5px 20px 0 rgb(69 67 96 / 10%);
